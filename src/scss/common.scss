@@ -1,3 +1,29 @@
 main {
   margin-top: 132px;
 }
+
+section {
+  &:not(:first-child) {
+    padding: 50px 0px;
+  }
+}
+
+.inp {
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(84, 98, 114, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.btn {
+  transition: $animation_speed;
+
+  &:hover {
+    background-color: #136cc3;
+  }
+}

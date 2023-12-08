@@ -12,10 +12,21 @@
               <div class="index-slider__slider swiper">
                 <div class="index-slider__wrapper swiper-wrapper">
                   <div class="index-slider__slide swiper-slide">
-                    <h2 class="index-slider__title">Высокоточная 3D-диагностика</h2>
+                    <h2 class="index-slider__title">Высокоточная <br />3D-диагностика</h2>
                     <p class="index-slider__subtitle">
                       Цифровая диагностика с компьютерным томографом Gendex CB-500 из Германии — для премиального
                       качества лечения
+                    </p>
+                    <button type="button" class="btn index-slider__btn">Подробнее</button>
+                    <div class="index-slider__image">
+                      <img src="@img/banner-women.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="index-slider__slide swiper-slide">
+                    <h2 class="index-slider__title">Консультация <br />по ортопедии</h2>
+                    <p class="index-slider__subtitle">
+                      Консультация опытных специалистов по протезированию и восстановлению зубного ряда. Запись на сайте
+                      и по телефону.
                     </p>
                     <button type="button" class="btn index-slider__btn">Подробнее</button>
                     <div class="index-slider__image">
@@ -30,7 +41,7 @@
                     </p>
                     <button type="button" class="btn index-slider__btn">Подробнее</button>
                     <div class="index-slider__image">
-                      <img src="@img/banner-women.png" alt="" />
+                      <img src="@img/banner-tooth.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -39,6 +50,7 @@
             </div>
           </div>
         </section>
+        @@include('html/callback.html',{})
       </main>
       @@include('html/_footer.htm',{})
     </div>
