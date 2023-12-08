@@ -37,7 +37,7 @@ function initSliders() {
       observer: true,
       observeParents: true,
       slidesPerView:1,
-      spaceBetween: 0,
+      spaceBetween: 30,
       autoHeight: false,
       speed: 800,
 
@@ -50,16 +50,16 @@ function initSliders() {
 
       // Эффекты
       // effect: 'fade',
-      // autoplay: {
-      //   delay: 6000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+      },
 
       // Пагинация
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        dynamicBullets: true,
+        dynamicBullets: false,
       },
 
       // Скроллбар

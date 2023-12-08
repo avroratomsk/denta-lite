@@ -1,4 +1,5 @@
 .index-slider {
+  margin-top: 31px;
   // .index-slider__container
 
   &__container {
@@ -22,22 +23,85 @@
 
   // .index-slider__slide
 
+  .swiper-slide {
+    height: 550px;
+  }
+
   &__slide {
+    height: 550px;
+    background-color: $lightBlue;
+    border-radius: 25px;
+    padding: 59px 54px 58px;
+    overflow: hidden;
+  }
+
+  .swiper-slide-active {
+    .index-slider__title {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    .index-slider__subtitle {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    .index-slider__btn {
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
 
   // .index-slider__title
 
   &__title {
+    color: $mainColor;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    // max-width: 395px;
+    transform: translateX(-180px);
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 0.6s;
   }
 
   // .index-slider__subtitle
 
   &__subtitle {
+    color: $mainColor;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 650px;
+    margin-bottom: 55px;
+    transform: translateX(-180px);
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 0.8s;
   }
 
   // .index-slider__btn
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 196px;
+    height: 48px;
+    background-color: $accent;
+    border-radius: 10px;
+
+    color: $white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 1s;
   }
 
   // .index-slider__image
@@ -52,14 +116,26 @@
 
   &__pagintion {
   }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.btn {
-}
-.swiper-pagination {
+
+  .swiper-pagination {
+    width: auto !important;
+    bottom: 58px !important;
+    left: 54px !important;
+    z-index: 99;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $white;
+    border-radius: 6px;
+    opacity: 1;
+    transition: $animation_speed;
+  }
+
+  .swiper-pagination-bullet-active {
+    border-radius: 8px;
+    background-color: $accent;
+    width: 36px;
+  }
 }
