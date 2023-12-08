@@ -1,5 +1,6 @@
 .index-slider {
   margin-top: 31px;
+  padding-bottom: 50px;
   // .index-slider__container
 
   &__container {
@@ -282,5 +283,102 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 150%;
+  }
+}
+
+.index-doctors {
+  // .index-doctors__container
+
+  &__container {
+  }
+
+  // .index-doctors__inner
+
+  &__inner {
+  }
+
+  // .index-doctors__title
+
+  &__title {
+  }
+
+  // .index-doctors__carousel
+
+  &__carousel {
+  }
+
+  // .index-doctors__slider
+
+  &__slider {
+    position: relative;
+  }
+
+  // .index-doctors__wrapper
+
+  &__wrapper {
+  }
+
+  // .index-doctors__slide
+
+  &__slide {
+  }
+
+  // .index-doctors__card
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0px 0px 16px 0px rgba(230, 230, 230, 0.5);
+  }
+}
+
+.index-doctor {
+  // .index-doctor__image
+
+  &__image {
+    max-width: 340px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // .index-doctor__content
+
+  &__content {
+    padding: 20px 15px 30px;
+  }
+
+  // .index-doctor__name
+
+  &__name {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 150%;
+    margin: 0px 0px 10px;
+  }
+
+  // .index-doctor__special
+
+  &__special {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  span {
+    border: 1px solid rgba($color: $accent, $alpha: 0.5);
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-top: 5px;
+    display: inline-flex;
+    color: rgba(51, 144, 236, 0.5);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 115%;
   }
 }
