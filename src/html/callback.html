@@ -1,24 +1,28 @@
 <section class="callback">
   <div class="callback__container">
     <div class="callback__inner">
-      <div class="callback__content">
-        <p class="callback__title">Запись на прием и консультацию врача</p>
-        <p class="callback__subtitle">
-          Укажите свой номер телефона, мы перезвоним и подберем для вас удобное время приема
-        </p>
-        <form action="" class="callback__form form-callback">
-          <div class="form-callback__icon">
-            <img src="@img/icon/a-phone-input.svg" alt="" />
-            <input type="text" placeholder="Телефон" class="form-callback__input inp" name="phone" />
+      <div class="callback__grid">
+        <div class="callback__col">
+          <div class="callback__image">
+            <img src="@img/callback.webp" alt="" title="" />
           </div>
-          <button type="submit" class="form-callback__submit">Отправить</button>
-        </form>
-        <div class="callback__note">
-          Нажимая кнопку «Отправить», вы даете согласие на <a href="#">обработку персональных данных</a>
         </div>
-      </div>
-      <div class="callback__image">
-        <img src="@img/callback.png" alt="" title="" />
+        <div class="callback__col">
+          <h2 class="callback__title title">
+            Есть вопросы ? <br />
+            <span>Напишите нам</span>
+          </h2>
+          <form action="#" class="callback__form">
+            <input type="text" class="callback__input inp" placeholder="Имя" name="name" />
+            <input type="text" class="callback__input inp" placeholder="Телефон" name="phone" />
+            <textarea name="message" class="callback__textarea" placeholder="Сообщение"></textarea>
+            <div class="callback__personal-info">
+              <input type="checkbox" id="personal-info" checked />
+              <label for="personal-info">Согласие с условиями обработки персональных данных</label>
+            </div>
+            <button type="submit" class="callback__submit btn">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
