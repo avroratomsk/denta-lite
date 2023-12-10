@@ -40,6 +40,7 @@ section {
   padding: 15px 30px;
   border: 1px solid rgba($color: $mainColor, $alpha: 1);
   position: relative;
+  transition: $animation_speed;
 
   &::before {
     content: "";
@@ -51,6 +52,7 @@ section {
     bottom: 0;
     background-color: $accent;
     z-index: -1;
+    transition: $animation_speed;
   }
 
   &:hover {

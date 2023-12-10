@@ -121,6 +121,11 @@
       color: $white;
       font-size: 15px;
       font-weight: 500;
+      transition: $animation_speed;
+
+      &:hover {
+        background-color: #0665c4;
+      }
     }
   }
 }
@@ -147,10 +152,6 @@
       margin-top: 5px;
       margin-left: 6px;
     }
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
   }
 
   // .menu__item--service
@@ -165,10 +166,16 @@
   // .menu__link
 
   &__link {
-    color: #546272;
+    color: $mainColor;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
-    line-height: 28px; /* 177.778% */
+    line-height: 28px;
+    padding: 20px 15px;
+    transition: $animation_speed;
+
+    &:hover {
+      color: $accent;
+    }
   }
 }
