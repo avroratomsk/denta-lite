@@ -249,112 +249,62 @@
 }
 
 .index-doctors {
-  // .index-doctors__container
-
-  &__container {
-  }
-
-  // .index-doctors__inner
-
-  &__inner {
-  }
-
-  // .index-doctors__title
-
-  &__title {
-  }
-
-  // .index-doctors__carousel
-
-  &__carousel {
-  }
-
-  // .index-doctors__slider
-
-  &__slider {
-    position: relative;
-  }
-
-  // .index-doctors__wrapper
-
-  &__wrapper {
-  }
-
-  .swiper-slide {
-    height: 360px !important;
-  }
-
   // .index-doctors__slide
 
   &__slide {
-    height: 360px !important;
-  }
-
-  // .index-doctors__card
-
-  &__card {
     display: flex;
-    overflow: hidden;
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0px 0px 16px 0px rgba(230, 230, 230, 0.5);
+    border: 1px solid rgba($color: $mainColor, $alpha: 0.3);
   }
-}
 
-.index-doctor {
-  // .index-doctor__image
+  // .index-doctors__leftside
 
-  &__image {
-    height: 360px;
-    width: 266px;
-    position: relative;
-    overflow: hidden;
+  &__leftside {
+    width: 40%;
 
     img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
       height: 100%;
+      width: 100%;
       object-fit: cover;
+      min-height: 360px;
     }
   }
 
-  // .index-doctor__content
+  // .index-doctors__rightside
 
-  &__content {
+  &__rightside {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    padding: 20px 15px 30px;
+    justify-content: space-between;
+    padding: 40px 20px;
   }
 
-  // .index-doctor__name
+  // .index-doctors__rightside-inherit
 
-  &__name {
+  &__rightside-inherit {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  // .index-doctors__rightside-name
+
+  &__rightside-name {
     font-size: 23px;
+    line-height: 140%;
     font-weight: 600;
-    line-height: 150%;
-    margin: 0px 0px 10px;
+    margin-bottom: 20px;
   }
 
-  // .index-doctor__special
+  // .index-doctors__rightside-spec
 
-  &__special {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
+  &__rightside-spec {
+    font-size: 16px;
   }
 
-  span {
-    align-self: flex-start;
-    border: 1px solid rgba($color: $accent, $alpha: 0.5);
-    border-radius: 10px;
-    padding: 5px 15px;
-    margin-top: 5px;
-    display: inline-flex;
-    color: rgba(51, 144, 236, 0.5);
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 115%;
+  // .index-doctors__rightside-btn
+
+  &__rightside-btn {
   }
 }
 
