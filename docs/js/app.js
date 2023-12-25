@@ -4242,6 +4242,30 @@
             },
             on: {}
         });
+        if (document.querySelector(".license__slider")) new swiper_core_Swiper(".license__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 4,
+            spaceBetween: 31,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 1e4,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".license-pagination",
+                clickable: true,
+                dynamicBullets: true
+            },
+            navigation: {
+                prevEl: ".license-button-prev",
+                nextEl: ".license-button-next"
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
