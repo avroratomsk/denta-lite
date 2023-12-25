@@ -60,6 +60,7 @@ $responsiveType: 1;
 
 body {
   overflow-x: hidden;
+
   // Скролл заблокирован
   .lock & {
     overflow: hidden;
@@ -67,8 +68,7 @@ body {
   }
 
   // Сайт загружен
-  .loaded & {
-  }
+  .loaded & {}
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -78,12 +78,12 @@ body {
   flex-direction: column;
 
   // Прижимаем footer
-  > main {
+  >main {
     flex: 1 1 auto;
   }
 
   // Фикс для слайдеров
-  > * {
+  >* {
     min-width: 0;
   }
 }
@@ -97,6 +97,7 @@ body {
 Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
+
   // Отзывчивая
   [class*="__container"] {
     @if ($maxWidthContainer>0) {
@@ -109,7 +110,10 @@ body {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
-} @else {
+}
+
+@else {
+
   // По брейк-поинтам
   [class*="__container"] {
     margin: 0 auto;
@@ -117,7 +121,9 @@ body {
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
-    } @else {
+    }
+
+    @else {
       @if ($containerPadding>0) {
         padding: 0 rem(math.div($containerPadding, 2));
       }
@@ -156,3 +162,4 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "base/select";
+@import "pages/single";
