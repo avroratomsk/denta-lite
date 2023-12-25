@@ -1,17 +1,20 @@
 body::-webkit-scrollbar {
-  width: 6px; /* ширина всей полосы прокрутки */
+  width: 6px;
+  /* ширина всей полосы прокрутки */
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent; /* цвет зоны отслеживания */
+  background: transparent;
+  /* цвет зоны отслеживания */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $accent; /* цвет бегунка */
+  background-color: $accent;
+  /* цвет бегунка */
 }
 
 main {
-  margin-top: 132px;
+  margin-top: 141px;
 }
 
 section {
@@ -103,5 +106,27 @@ section {
   &:hover {
     border: 1px solid #dddddd;
     box-shadow: 0px 0px 0px 0px rgba(230, 230, 230, 0.5);
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+
+  a,
+  span {
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-size: clamp(16px, 2em, 18px);
+    font-weight: 600;
+  }
+
+  a {
+    &::after {
+      content: '—';
+      margin: 0px 10px;
+    }
   }
 }
