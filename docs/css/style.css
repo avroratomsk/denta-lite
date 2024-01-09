@@ -2211,8 +2211,8 @@ Select c dropdown на JS
 
 .contact__inner {
   position: absolute;
-  top: clamp(0px, 10vh, 85px);
-  left: clamp(0px, 10vh, 85px);
+  top: clamp(1px, 10vh, 85px);
+  left: clamp(1px, 10vh, 85px);
   z-index: 2;
   background-color: #ffffff;
   padding: clamp(20px, 20vw, 40px);
