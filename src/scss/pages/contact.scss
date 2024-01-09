@@ -19,8 +19,8 @@
   // .contact__inner
   &__inner {
     position: absolute;
-    top: clamp(0px, 10vh, 85px);
-    left: clamp(0px, 10vh, 85px);
+    top: clamp(1px, 10vh, 85px);
+    left: clamp(1px, 10vh, 85px);
     z-index: 2;
     background-color: $white;
     padding: clamp(20px, 20vw, 40px);
