@@ -202,6 +202,7 @@
 }
 
 .requisites {
+  position: relative;
 
   // .requisites__container
 
@@ -214,6 +215,15 @@
   // .requisites__table
 
   &__table {}
+
+  // .requisites__image
+  &__image {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    opacity: .1;
+  }
 }
 
 .table-requisites {
@@ -232,4 +242,5 @@
   // .table-requisites__col
 
   &__col {}
+
 }
