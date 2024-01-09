@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"Специалисты" })
+
+<body class="_white">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <div class="single-banner" style="background-image: url(../img/specialisty.jpg);">
+        <div class="single-banner__container">
+          <div class="single-banner__inner">
+            @@include('html/breadcrumbs.html',{ "title":"Специалисты"})
+            <h1 class="single-banner__title title">Специалисты клиники</h1>
+            <div class="single-banner__links">
+              <a href="#" class="single-banner__link current-link">Врачи</a>
+              <a href="#" class="single-banner__link">О клинике</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="specialisty">
+        <div class="specialisty__container">
+          <div class="specialisty__note">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-lf">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-rh">
+            Улыбка – визитная карточка человека! Ежедневно мы помогаем пациентам решать целый спектр проблем
+            стоматологического характера. Мы делаем это, вооружившись опытом, знаниями и технологическими возможностями
+            Центра, чтобы наши пациенты были здоровы, красивы и успешны!
+          </div>
+          <div class="specialisty__grid">
+            <div class="specialisty__item">
+              <a href="#" class="specialisty__image">
+                <img src="@img/doctor-3.jpeg" alt="">
+              </a>
+              <div class="specialisty__info">
+                <a href="#" class="specialisty__name">Андропов Иван Сергеевич</a>
+                <div class="specialisty__spec">
+                  Стоматолог-Ортапед-Терапевт
+                </div>
+              </div>
+            </div>
+            <div class="specialisty__item">
+              <a href="#" class="specialisty__image">
+                <img src="@img/doctor-3.jpeg" alt="">
+              </a>
+              <div class="specialisty__info">
+                <a href="#" class="specialisty__name">Андропов Иван Сергеевич</a>
+                <div class="specialisty__spec">
+                  Стоматолог-Ортапед-Терапевт
+                </div>
+              </div>
+            </div>
+            <div class="specialisty__item">
+              <a href="#" class="specialisty__image">
+                <img src="@img/doctor-3.jpeg" alt="">
+              </a>
+              <div class="specialisty__info">
+                <a href="#" class="specialisty__name">Андропов Иван Сергеевич</a>
+                <div class="specialisty__spec">
+                  Стоматолог-Ортапед-Терапевт
+                </div>
+              </div>
+            </div>
+            <div class="specialisty__item">
+              <a href="#" class="specialisty__image">
+                <img src="@img/doctor-3.jpeg" alt="">
+              </a>
+              <div class="specialisty__info">
+                <a href="#" class="specialisty__name">Андропов Иван Сергеевич</a>
+                <div class="specialisty__spec">
+                  Стоматолог-Ортапед-Терапевт
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -153,13 +153,18 @@ body {
 
 // Подключение стилей общих элементов проекта
 @import "common";
+@import "switch-color";
 
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
 @import "callback";
+@import "breadcrumbs";
+@import "blocks/single-banner";
 
 // Подключение стилей отдельных страниц
 @import "home";
 @import "base/select";
 @import "pages/single";
+@import "pages/contact";
+@import "pages/specialisty";

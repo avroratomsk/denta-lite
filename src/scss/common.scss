@@ -23,6 +23,7 @@ section {
   }
 }
 
+
 .inp {
   border-bottom: 1px solid rgba($color: $mainColor, $alpha: 0.3);
   background-color: transparent;
@@ -69,7 +70,7 @@ section {
 }
 
 .title {
-  font-size: 42px;
+  font-size: clamp(30px, 10vh, 42px);
   font-weight: 800;
   line-height: 150%;
 
@@ -106,27 +107,5 @@ section {
   &:hover {
     border: 1px solid #dddddd;
     box-shadow: 0px 0px 0px 0px rgba(230, 230, 230, 0.5);
-  }
-}
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  padding: 20px 0px;
-
-  a,
-  span {
-    display: flex;
-    align-items: center;
-    color: $white;
-    font-size: clamp(16px, 2em, 18px);
-    font-weight: 600;
-  }
-
-  a {
-    &::after {
-      content: '—';
-      margin: 0px 10px;
-    }
   }
 }

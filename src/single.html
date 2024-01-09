@@ -2,17 +2,13 @@
 <html lang="ru">
 @@include('html/_head.htm',{ "title":"Страница услуги" })
 
-<body>
+<body class="_white">
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="single-page">
       <div class="single-banner" style="background-image: url(../img/mostovidnoe-protez.webp);">
         <div class="single-banner__container">
-          <div class="breadcrumbs">
-            <a href="#">Главная страница</a>
-            <a href="#">Услуги</a>
-            <span>Мостовидные протезы</span>
-          </div>
+          @@include('html/breadcrumbs.html',{ "title":"Услуга"})
         </div>
       </div>
       <div class="single-content">
@@ -21,17 +17,17 @@
           <div class="single-content__container">
             <div class="single-content__inner">
               <div class="single-content__menu-link">
-                <a href="#">Об услуги</a>
-                <a href="#">Цены</a>
-                <a href="#">Специалисты</a>
-                <a href="#">Лицензии</a>
+                <button type="button" data-anchor="single-about">Об услуги</button>
+                <button type="button" data-anchor="single-price">Цены</button>
+                <button type="button" data-anchor="single-spec">Специалисты</button>
+                <button type="button" data-anchor="single-license">Лицензии</button>
               </div>
-              <button type="button" class="single-content__btn">Записаться</button>
+              <!-- <button type="button" class="single-content__btn">Записаться</button> -->
             </div>
           </div>
         </div>
       </div>
-      <div class="single-about">
+      <div class="single-about" id="single-about">
         <div class="single-about__container">
           <div class="single-about__inner">
             <h2 class="single-about__title">Об услуги</h2>
@@ -66,7 +62,7 @@
         </div>
       </div>
 
-      <div class="single-price">
+      <div class="single-price" id="single-price">
         <div class="single-price__container">
           <div class="single-price__inner">
             <h2 class="single-price__title">Цена - <span>мостовидные протезы</span></h2>
@@ -102,7 +98,7 @@
         </div>
       </div>
 
-      <div class="single-spec specialist">
+      <div class="single-spec specialist" id="single-spec">
         <div class="specialist__container">
           <h2 class="specialist__title"><span>Специалисты</span> оказывающие эту услугу</h2>
           <div class="specialist__grid">
@@ -146,7 +142,7 @@
         </div>
       </div>
 
-      <div class="single-license license">
+      <div class="single-license license" id="single-license">
         <div class="license__container">
           <div class="license__top">
             <h2 class="license__title"><span>Лицензии</span> нашей клиники</h2>

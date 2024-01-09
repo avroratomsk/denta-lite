@@ -80,3 +80,29 @@ if (buttonsEnroll) {
   })
 }
 
+/**
+ * Скролл до элемента на посадочной странице услуги
+ */
+
+let anchorLink = document.querySelectorAll('[data-anchor]');
+
+if(anchorLink){
+  anchorLink.forEach(link => {
+    link.addEventListener('click', function(e){
+     let idElem = this.dataset.anchor;
+     let elemToScroll = document.getElementById(idElem);
+
+     let elemPosition = elemToScroll.getBoundingClientRect().top;
+     let headerHeight = document.querySelector('header').clientHeight;
+
+     let scrollingHeight = elemPosition - headerHeight;
+     
+     window.scrollBy({
+      top: scrollingHeight,
+      left: 0,
+      behavior: 'smooth'
+    })
+    })
+  })
+}
+

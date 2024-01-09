@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"Контакты" })
+
+<body class="_black">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+
+      <section class="contact">
+        <div class="contact__container">
+          @@include('html/breadcrumbs.html',{ "title":"Контакты" })
+          <h1 class="contact__title title">Контаты <span>клиники</span></h1>
+        </div>
+        <div class="contact__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A614e10e42f42dc1e42ae88343fbfd6ea650dac98f8e0c721821bec661c70f5dc&amp;source=constructor"
+            width="100%" height="800" frameborder="0">
+          </iframe>
+          <div class="contact__inner">
+            <div class="contact__content content-contact">
+              <div class="content-contact__body">
+                <!-- <h2 class="content-contact__title">Контактная информация</h2> -->
+                <div class="content-contact__grid">
+                  <div class="content-contact__item">
+                    <div class="content-contact__item-left">
+                      <span>Телефон</span>
+                      <a href="tel:+79999999999">+7(999) 999-99-99</a>
+                    </div>
+                    <div class="content-contact__item-right">
+                      <img src="@img/icon/i-phone.svg" alt="" title="">
+                    </div>
+                  </div>
+                  <div class="content-contact__item">
+                    <div class="content-contact__item-left">
+                      <span>Email</span>
+                      <a href="mailto:denta@mail.ru">denta@mail.ru</a>
+                    </div>
+                    <div class="content-contact__item-right">
+                      <img src="@img/icon/i-mail.svg" alt="" title="">
+                    </div>
+                  </div>
+                  <div class="content-contact__item">
+                    <div class="content-contact__item-left">
+                      <span>Кемерово</span>
+                      <p>г. Кемерово, ул Красная, д 14 А</p>
+                    </div>
+                    <div class="content-contact__item-right">
+                      <img src="@img/icon/i-location.svg" alt="" title="">
+                    </div>
+                  </div>
+                  <div class="content-contact__item">
+                    <div class="content-contact__item-left">
+                      <span>Режим работы</span>
+                      <p>с 8:30 до 19:00</p>
+                    </div>
+                    <div class="content-contact__item-right">
+                      <img src="@img/icon/i-time.svg" alt="" title="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__form form-contact">
+              <h2 class="form-contact__title">Напишите нам !</h2>
+              <form action="#" class="form-contact__form">
+                <div class="form-contact__row">
+                  <input type="text" name="name" class="form-contact__input" placeholder="Ваше имя">
+                  <input type="text" name="phone" class="form-contact__input" placeholder="Ваш телефон">
+                </div>
+                <div class="form-contact__row">
+                  <textarea name="message" placeholder="Ваше сообщение" class="form-contact__textarea"></textarea>
+                </div>
+                <div class="form-contact__row">
+                  <div class="form-contact__checkbox">
+                    <input type="checkbox" id="agreement" checked>
+                    <label for="agreement">Согласие с условиями обработки персональных данных</label>
+                  </div>
+                  <button type="submit" class="form-contact__submit btn">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="requisites">
+        <div class="requisites__container">
+          <h2 class="requisites__title title"><span>Реквизиты</span> клиники Дента-лайт</h2>
+          <div class="requisites__table table-requisites">
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Полное наименование:
+              </div>
+              <div class="table-requisites__col">
+                ООО "ДЕНТ-ЛАЙТ"
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Краткое наименование:
+              </div>
+              <div class="table-requisites__col">
+                ООО "Дента-лайт"
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Адрес юридический:
+              </div>
+              <div class="table-requisites__col">
+                г. Кемерово, ул Красная, д 14А
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Фактический адрес:
+              </div>
+              <div class="table-requisites__col">
+                г. Кемерово, ул Красная, д 14А
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                КПП:
+              </div>
+              <div class="table-requisites__col">
+                420501001
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                ИНН:
+              </div>
+              <div class="table-requisites__col">
+                4205202622
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                ОГРН:
+              </div>
+              <div class="table-requisites__col">
+                1104205010832
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Адрес почтовый:
+              </div>
+              <div class="table-requisites__col">
+                г. Кемерово, ул Красная, д 14А
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                № телефона, факса, электронной почты:
+              </div>
+              <div class="table-requisites__col">
+                +7(999) 999-99-99 Email: denta@mail.ru
+              </div>
+            </div>
+            <div class="table-requisites__row">
+              <div class="table-requisites__col">
+                Директор:
+              </div>
+              <div class="table-requisites__col">
+                Суханова Евгения Алексеевна
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
