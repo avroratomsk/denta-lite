@@ -36,9 +36,9 @@ function initSliders() {
       modules: [Navigation, Pagination, Autoplay],
       observer: true,
       observeParents: true,
-      slidesPerView:1,
-      spaceBetween: 0,
-      autoHeight: false,
+      slidesPerView: 1,
+      spaceBetween: 60,
+      autoHeight: true,
       speed: 800,
 
       //touchRatio: 0,
@@ -46,6 +46,7 @@ function initSliders() {
       loop: true,
       //preloadImages: false,
       //lazy: true,
+      centeredSlides: true,
 
 
       // Эффекты
@@ -162,25 +163,25 @@ function initSliders() {
       // },
 
       // Брейкпоинты
-      // breakpoints: {
-      // 	320: {
-      // 		slidesPerView: 1,
-      // 		spaceBetween: 20,
-      // 		autoHeight: true,
-      // 	},
-      // 	485: {
-      // 		slidesPerView: 2,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	992: {
-      // 		slidesPerView: 3,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	1268: {
-      // 		slidesPerView: 3,
-      // 		spaceBetween: 30,
-      // 	},
-      // },
+      breakpoints: {
+      	320: {
+      		slidesPerView: 1,
+      		spaceBetween: 20,
+      		autoHeight: true,
+      	},
+      	485: {
+      		slidesPerView: 1,
+      		spaceBetween: 20,
+      	},
+      	715: {
+      		slidesPerView: 2,
+      		spaceBetween: 20,
+      	},
+      	1268: {
+      		slidesPerView: 3,
+      		spaceBetween: 20,
+      	},
+      },
       // События
       on: {
 
@@ -242,31 +243,32 @@ function initSliders() {
       // },
 
       // Брейкпоинты
-      // breakpoints: {
-      // 	320: {
-      // 		slidesPerView: 1,
-      // 		spaceBetween: 20,
-      // 		autoHeight: true,
-      // 	},
-      // 	485: {
-      // 		slidesPerView: 2,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	992: {
-      // 		slidesPerView: 3,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	1268: {
-      // 		slidesPerView: 3,
-      // 		spaceBetween: 30,
-      // 	},
-      // },
+      breakpoints: {
+      	320: {
+      		slidesPerView: 1,
+      		spaceBetween: 20,
+      		autoHeight: true,
+      	},
+      	485: {
+      		slidesPerView: 1,
+      		spaceBetween: 20,
+      	},
+      	992: {
+      		slidesPerView: 2,
+      		spaceBetween: 31,
+      	},
+      	1268: {
+      		slidesPerView: 2,
+      		spaceBetween: 31,
+      	},
+      },
       // События
       on: {
 
       }
     });
   }
+
   if (document.querySelector('.license__slider')) { // Указываем скласс нужного слайдера
     // Создаем слайдер
     new Swiper('.license__slider', { // Указываем скласс нужного слайдера

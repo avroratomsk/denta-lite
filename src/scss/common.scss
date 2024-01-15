@@ -14,12 +14,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-top: 141px;
+  margin-top: 160px;
 }
 
 section {
   &:not(:first-child) {
-    padding: 90px 0px;
+    padding: clamp(20px, 10vw, 90px) 0px;
+  }
+
+  &.bg {
+    background-color: rgba($color: $accent, $alpha: .05);
   }
 }
 
@@ -70,12 +74,13 @@ section {
 }
 
 .title {
-  font-size: clamp(30px, 10vh, 42px);
+  font-size: clamp(30px, 2.5vw, 42px);
   font-weight: 800;
   line-height: 150%;
 
   span {
     color: $accent;
+    white-space: nowrap;
   }
 }
 
