@@ -4175,10 +4175,18 @@
             observer: true,
             observeParents: true,
             slidesPerView: 1,
+<<<<<<< HEAD
             spaceBetween: 0,
             autoHeight: false,
             speed: 800,
             loop: true,
+=======
+            spaceBetween: 60,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            centeredSlides: true,
+>>>>>>> develop
             autoplay: {
                 delay: 1e4,
                 disableOnInteraction: false
@@ -4216,6 +4224,28 @@
                 prevEl: ".index-button-prev",
                 nextEl: ".index-button-next"
             },
+<<<<<<< HEAD
+=======
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                485: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                715: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1268: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+>>>>>>> develop
             on: {}
         });
         if (document.querySelector(".reviews__slider")) new swiper_core_Swiper(".reviews__slider", {
@@ -4240,6 +4270,28 @@
                 prevEl: ".index-button-prev",
                 nextEl: ".index-button-next"
             },
+<<<<<<< HEAD
+=======
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                485: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 31
+                },
+                1268: {
+                    slidesPerView: 2,
+                    spaceBetween: 31
+                }
+            },
+>>>>>>> develop
             on: {}
         });
         if (document.querySelector(".license__slider")) new swiper_core_Swiper(".license__slider", {
