@@ -58,3 +58,44 @@ if(anchorLink){
   })
 }
 
+
+/**
+ * submenu открытие и зактырие submenu
+ */
+
+const submenuTrigerBtn = document.querySelector('#submenu-show');
+
+if(submenuTrigerBtn){
+  submenuTrigerBtn.addEventListener('click', function(e) {
+    this.classList.toggle('_active');
+    document.querySelector('.sub-menu').classList.toggle('_show-submenu');
+  })
+}
+
+/**
+ * Наведение на submenu-item и присвоение класса, так же показ контента данного submenu-item
+ */
+
+const submenuItem = document.querySelectorAll('.sub-menu__item');
+const contentSubmenu = document.querySelectorAll('.content-submenu');
+
+if(submenuItem){
+  submenuItem.forEach(item => {
+    item.addEventListener('mouseover', function(e) {
+      submenuItem.forEach(item => item.classList.remove('_active'));
+      this.classList.add('_active');
+      
+      let dataAttrValue = this.dataset.id;
+
+      let contentElem = document.querySelector(`.content-submenu[data-id="${dataAttrValue}"]`);
+
+      if(contentElem){
+        contentSubmenu.forEach(item => item.classList.remove('_show'));
+        contentElem.classList.add('_show');
+      }
+
+    })
+  });
+}
+
+
