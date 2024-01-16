@@ -2,6 +2,7 @@
   <div class="header__container">
     <div class="header__inner">
       <div class="header__top top-header">
+        <button type="button" class="header__icon icon-menu"><span></span></button>
         <div class="top-header__contact">
           <div class="top-header__address top-header__contact-item">
             г. Кемерово, ул Красная, д 14 А
@@ -19,17 +20,59 @@
           </div>
         </div>
         <button type="button" class="top-header__btn">Записаться на прием</button>
+        <a href="tel:+79999999999" class="top-header__icon-phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
       <div class="header__bottom bottom-header">
         <ul class="bottom-header__menu menu">
-          <li class="menu__item">
+          <li class="menu__item" id="submenu-show">
             <a href="#" class="menu__link">Услуги</a>
-            <button type="button" class="menu__btn-sub" id="submenu-show">
+            <button type="button" class="menu__btn-sub">
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <ul class="menu__sub sub-menu">
-              <li class="sub-menu__item"><a href="#" class="sub-menu__link"></a></li>
-            </ul>
+            <div class="menu__sub sub-menu">
+              <ul class="sub-menu__list">
+                <li data-id="1" class="sub-menu__item _active"><a href="#">Хирургия</a></li>
+                <li data-id="2" class="sub-menu__item"><a href="#">Ортопедия</a></li>
+                <li data-id="3" class="sub-menu__item"><a href="#">Протезирование</a></li>
+                <li data-id="4" class="sub-menu__item"><a href="#">Ортодонтрия</a></li>
+                <li data-id="5" class="sub-menu__item"><a href="#">Терапия</a></li>
+                <li data-id="6" class="sub-menu__item"><a href="#">Исправление прикуса</a></li>
+                <li data-id="7" class="sub-menu__item"><a href="#">Лечение десен</a></li>
+                <li data-id="8" class="sub-menu__item"><a href="#">Лечение зубов под наркозом</a></li>
+              </ul>
+              <div class="sub-menu__content content-submenu _show" data-id="1">
+                <span class="content-submenu__title">Хирургия</span>
+                <ul class="content-submenu__list">
+                  <li><a href="#">Удаление зубов</a></li>
+                  <li><a href="#">Микрохирургия</a></li>
+                  <li><a href="#">Удаление зубов при ортодонтическом лечении</a></li>
+                  <li><a href="#">Удаление ретинированных и дистопированных зубов</a></li>
+                  <li><a href="#">Удаление молочных зубов</a></li>
+                </ul>
+              </div>
+              <div class="sub-menu__content content-submenu" data-id="2">
+                <span class="content-submenu__title">Ортопедия</span>
+                <ul class="content-submenu__list">
+                  <li><a href="#">Удаление зубов</a></li>
+                  <li><a href="#">Микрохирургия</a></li>
+                  <li><a href="#">Удаление зубов при ортодонтическом лечении</a></li>
+                  <li><a href="#">Удаление ретинированных и дистопированных зубов</a></li>
+                  <li><a href="#">Удаление молочных зубов</a></li>
+                </ul>
+              </div>
+              <div class="sub-menu__content content-submenu" data-id="3">
+                <span class="content-submenu__title">Протезирование</span>
+                <ul class="content-submenu__list">
+                  <li><a href="#">Удаление зубов</a></li>
+                  <li><a href="#">Микрохирургия</a></li>
+                  <li><a href="#">Удаление зубов при ортодонтическом лечении</a></li>
+                  <li><a href="#">Удаление ретинированных и дистопированных зубов</a></li>
+                  <li><a href="#">Удаление молочных зубов</a></li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="menu__item _active"><a href="#" class="menu__link">Специалисты</a></li>
           <li class="menu__item"><a href="#" class="menu__link">О клинике</a></li>

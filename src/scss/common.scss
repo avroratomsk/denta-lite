@@ -14,7 +14,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-top: 160px;
+  margin-top: clamp(60px, 13vw, 160px);
 }
 
 section {
