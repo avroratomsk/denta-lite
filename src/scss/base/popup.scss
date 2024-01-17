@@ -12,8 +12,10 @@ body::after {
   z-index: 149;
 }
 
-.popup-show body::after {
+.popup-show body::after,
+.lock body::after {
   opacity: 1;
+  pointer-events: inherit;
 }
 
 .popup {

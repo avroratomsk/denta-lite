@@ -418,6 +418,7 @@ export function menuInit() {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				document.querySelector('.menu-mb').classList.toggle('_show-menu');
 			}
 		});
 	};
