@@ -119,10 +119,22 @@
   // .single-about__content
 
   &__content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    a {
+      line-height: 150%;
+    }
+
     h3 {
       font-size: 18px;
       margin-bottom: 15px;
-      line-height: 140%;
       font-weight: 500;
     }
 
