@@ -8,10 +8,10 @@
 
   // .specialisty__note
   &__note {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     font-weight: 600;
     line-height: 160%;
-    padding: 50px 100px;
+    padding: clamp(30px, 5vw, 50px) clamp(30px, 10vw, 100px);
     color: rgba($color: $mainColor, $alpha: .8);
     border: 1px solid rgba($color: $mainColor, $alpha: .1);
     margin-bottom: 40px;
@@ -50,8 +50,11 @@
 
   &__item {
     border: 1px solid rgba($color: $mainColor, $alpha: .2);
-    max-width: 400px;
     position: relative;
+
+    @media screen and (min-width: 646px) {
+      max-width: 400px;
+    }
 
     &::before {
       content: '';

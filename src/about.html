@@ -1,15 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"О клинике" })
 
 <body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <div class="single-banner" style="background-image: url(../img/specialisty.jpg);">
+        <div class="single-banner__container">
+          <div class="single-banner__inner">
+            @@include('html/breadcrumbs.html',{ "title":"Специалисты"})
+            <h1 class="single-banner__title _title">Специалисты клиники</h1>
+            <div class="single-banner__links">
+              <a href="#" class="single-banner__link current-link">Специалисты</a>
+              <a href="#" class="single-banner__link">О клинике</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="about">
+        <div class="about__container">
+          <h2 class="about__title _title"><span>«Дент-лайт»</span> — активная и актуальная клиника.</h2>
+          <div class="specialisty__note">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-lf">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-rh">
+            Мы внедряем новые знания и методики лечения в нашу работу, и практикуем современный подход к лечению ваших
+            зубов. Используем только качественные материалы от проверенных мировых производителей с отличной
+            репутацией и современное передовое оборудование. Это помогает нам быть на острие технологий, а значит, и
+            качества лечения.
+          </div>
+          <div class="text">
+            <p>
+              Стоматологическая клиника "Дент-Лайт" - это высокий уровень сервиса и комфортные условия лечения зубов,
+              благодаря чему Ваше пребывание здесь становится максимально удобным. Клиника оснащена современным
+              диагностическим и лечебным оборудованием, что позволяет нам оказывать
+              медицинскую помощь высочайшего качества.
+            </p>
+            <br>
+            <p>В нашей команде практикуют квалифицированные врачи с богатым опытом работы и обширными знаниями всех
+              направлений стоматологии. Специалисты клиники "Дент-Лайт" осуществляют индивидуальный подход к каждому
+              пациенту,
+              учитывая пожелания и потребности, а также предлагают комплексное решение стоматологических проблем.
+              "Дент-Лайт" – это место, где Ваша улыбка находится в надежных руках профессионалов, а Ваш комфорт и
+              удобство
+              является нашим приоритетом.
+            </p>
+          </div>
+          <div class="about__gallery gallery">
+            <div class="gallery__column">
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+            </div>
+            <div class="gallery__column">
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+            </div>
+            <div class="gallery__column">
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+              <a href="#" data-fancybox="gallery">
+                <img src="@img/about.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <div class="single-license license" id="single-license">
+        <div class="license__container">
+          <div class="license__inner">
+            <div class="license__top">
+              <h2 class="license__title _title"><span>Лицензии</span> нашей клиники</h2>
+              <div class="swiper-pagination license-pagination"></div>
+            </div>
+            <div class="license__slider swiper">
+              <div class="license__wrapper swiper-wrapper">
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+                <div class="license__slide swiper-slide">
+                  <img src="@img/license.jpg" alt="">
+                </div>
+              </div>
+              <div class="license-button-prev swiper-button-prev"></div>
+              <div class="license-button-next swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="callback">
+        <div class="callback__container">
+          <div class="callback__inner">
+            <div class="callback__grid">
+              <div class="callback__col">
+                <div class="callback__image">
+                  <img src="@img/callback.webp" alt="" title="" />
+                </div>
+              </div>
+              <div class="callback__col">
+                <h2 class="callback__title _title">
+                  Запишитесь<br />
+                  <span>на консультацию</span>
+                </h2>
+                <form action="#" class="callback__form">
+                  <input type="text" class="callback__input inp" placeholder="Имя" name="name" />
+                  <input type="text" class="callback__input inp" placeholder="Телефон" name="phone" />
+                  <textarea name="message" class="callback__textarea" placeholder="Сообщение"></textarea>
+                  <div class="callback__personal-info">
+                    <input type="checkbox" id="personal-info" checked />
+                    <label for="personal-info">Согласие с условиями обработки персональных данных</label>
+                  </div>
+                  <button type="submit" class="callback__submit btn">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
 </body>
 
 </html>
