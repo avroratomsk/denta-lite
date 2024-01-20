@@ -1,4 +1,10 @@
-.single-page {}
+.single-page {
+  .grid-service {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
 
 
 
