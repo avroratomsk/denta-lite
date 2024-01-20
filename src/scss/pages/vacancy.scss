@@ -1,0 +1,119 @@
+.vacancy {
+  padding: clamp(20px, 10vw, 90px) 0;
+
+  // .vacancy__container
+
+  &__container {}
+
+  // .vacancy__title
+
+  &__title {}
+
+  // .vacancy__grid
+
+  &__grid {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  // .vacancy__col
+
+  &__col {
+    background-color: rgba($color: $accent, $alpha: .1);
+    padding: clamp(20px, 7vw, 50px);
+    border-radius: 25px;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  // .vacancy__col-left
+
+  &__col-left {}
+
+  // .vacancy__col-title
+
+  &__col-title {
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: 800;
+    line-height: 150%;
+  }
+
+  // .vacancy__col-price
+
+  &__col-price {
+    line-height: 150%;
+    color: rgba($color: $accent, $alpha: 1.0);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  // .vacancy__col-label
+
+  &__col-label {
+    line-height: 150%;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0px 10px;
+  }
+
+  // .vacancy__col-list
+
+  &__col-list {
+    padding-left: 15px;
+
+    li {
+      line-height: 150%;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -3px;
+        left: 0;
+        display: block;
+        width: 7px;
+        height: 7px;
+        background-color: $accent;
+        border-radius: 50%;
+        margin-right: 7px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // .vacancy__col-right
+
+  &__col-right {}
+
+  // .vacancy__col-btn
+
+  &__col-btn {
+    margin-top: 40px;
+    width: 290px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $accent, $alpha: 1.0);
+    color: rgba($color: $white, $alpha: 1.0);
+    border-radius: 5px;
+    transition: $animation_speed;
+
+    &:hover {
+      background-color: rgba($color: $accent, $alpha: .8);
+    }
+  }
+}

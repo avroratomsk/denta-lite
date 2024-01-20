@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"Цены" })
+
+<body class="_white">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <div class="single-banner" style="background-image: url(../img/specialisty.jpg);">
+        <div class="single-banner__container">
+          <div class="single-banner__inner">
+            @@include('html/breadcrumbs.html',{ "title":"Цены"})
+            <h1 class="single-banner__title _title">Прайс-лист услуг</h1>
+            <div class="single-banner__links">
+              <a href="#" class="single-banner__link current-link">Цены</a>
+              <a href="#" class="single-banner__link">О клинике</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="price">
+        <div class="price__container">
+          <div class="price__inner">
+            <div class="price__search search-price">
+              <div class="search-price__form">
+                <form action="#">
+                  <button type="button" class="search-price__btn">Поиск</button>
+                  <input type="search" name="search" id="search" placeholder="Найти услугу ...">
+                </form>
+              </div>
+              <div class="search-price__result">
+                <p class="search-price__result-title">Поиск по запросу: <span>"Терапия"</span></p>
+                <div class="price__content price-table">
+                  <div class="price-table__item">
+                    <div class="price-table__name"> АКЦИЯ 'ВАКЦИНАЦИЯ ОТ КЛЕЩЕВОГО ЭНЦЕФАЛИТА'</div>
+                    <div class="price-table__price">1900 ₽</div>
+                  </div>
+                  <div class="price-table__item">
+                    <div class="price-table__name"> АКЦИЯ 'ВАКЦИНАЦИЯ ОТ КЛЕЩЕВОГО ЭНЦЕФАЛИТА'</div>
+                    <div class="price-table__price">1900 ₽</div>
+                  </div>
+                  <div class="price-table__item">
+                    <div class="price-table__name"> АКЦИЯ 'ВАКЦИНАЦИЯ ОТ КЛЕЩЕВОГО ЭНЦЕФАЛИТА'</div>
+                    <div class="price-table__price">1900 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-spollers class="spollers">
+              <div class="spollers__item">
+                <button type="button" data-spoller class="spollers__title">
+                  <div class="price__icon">
+                    <img src="@img/price-icon/tooth-svgrepo-com.svg" alt="">
+                  </div>
+                  Зуболечение
+                </button>
+                <div class="spollers__body">
+                  <!-- <div class="price__caption">
+                    <div class="price__name">Название услуги</div>
+                    <div class="price__price">Цена услуги</div>
+                  </div> -->
+                  <div class="price__content price-table">
+                    <div class="price-table__item">
+                      <div class="price-table__name"> АКЦИЯ 'ВАКЦИНАЦИЯ ОТ КЛЕЩЕВОГО ЭНЦЕФАЛИТА'</div>
+                      <div class="price-table__price">1900 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="callback bg">
+        <div class="callback__container">
+          <div class="callback__inner">
+            <div class="callback__grid">
+              <div class="callback__col">
+                <div class="callback__image">
+                  <img src="@img/callback.webp" alt="" title="" />
+                </div>
+              </div>
+              <div class="callback__col">
+                <h2 class="callback__title _title">
+                  Запишитесь<br />
+                  <span>на консультацию</span>
+                </h2>
+                <form action="#" class="callback__form">
+                  <input type="text" class="callback__input inp" placeholder="Имя" name="name" />
+                  <input type="text" class="callback__input inp" placeholder="Телефон" name="phone" />
+                  <textarea name="message" class="callback__textarea" placeholder="Сообщение"></textarea>
+                  <div class="callback__personal-info">
+                    <input type="checkbox" id="personal-info" checked />
+                    <label for="personal-info">Согласие с условиями обработки персональных данных</label>
+                  </div>
+                  <button type="submit" class="callback__submit btn">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

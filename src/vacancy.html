@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"Вакансии" })
+
+<body class="_black">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="vacancy">
+        <div class="vacancy__container">
+          <h1 class="vacancy__title _title">Вакансии</h1>
+          @@include('html/breadcrumbs.html',{ "title":"Услуга"})
+          <div class="specialisty__note">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-lf">
+            <img src="@img/quot-left.png" alt="" class="specialisty__quote-rh">
+            Наша стоматология постоянно развивается.
+            Мы сильная и целеустремленная команда. Вы хотите много работать, приятно отдыхать и хорошо жить?
+            Тогда Вы готовы стать частью стоматологии "Дент-лайт". Добро пожаловать!
+            Работай, Отдыхай, Живи!
+            Мы ждем Вас!
+
+            Не важно, в каком городе Вы сейчас трудитесь. Если Вы хотите работать вместе с нами – звоните и пишите.
+            Качественная стоматология! Хорошие стоматологи! Отличная команда для работы!
+          </div>
+          <div class="vacancy__grid">
+            <div class="vacancy__col">
+              <div class="vacancy__col-left">
+                <p class="vacancy__col-title">Ассистен-стоматолога</p>
+                <p class="vacancy__col-price">от 23 000 руб.</p>
+                <p class="vacancy__col-label">Обязанности:</p>
+                <ul class="vacancy__col-list">
+                  <li>Ассистирование врачу</li>
+                  <li>Своевременное и качественное ведение медицинской документации;</li>
+                  <li>Подготовка стоматологического оборудования к работе, контроль исправности оборудования и
+                    соблюдение техники безопасности при работе с ним;</li>
+                  <li>Уборка кабинета после смены;</li>
+                  <li>Более подробная информация о должностных обязанностях на собеседовании.</li>
+                </ul>
+                <p class="vacancy__col-label">Требования:</p>
+                <ul class="vacancy__col-list">
+                  <li>Ассистирование врачу</li>
+                  <li>Своевременное и качественное ведение медицинской документации;</li>
+                  <li>Подготовка стоматологического оборудования к работе, контроль исправности оборудования и
+                    соблюдение техники безопасности при работе с ним;</li>
+                  <li>Уборка кабинета после смены;</li>
+                  <li>Более подробная информация о должностных обязанностях на собеседовании.</li>
+                </ul>
+                <p class="vacancy__col-label">Условия:</p>
+                <ul class="vacancy__col-list">
+                  <li>Ассистирование врачу</li>
+                  <li>Своевременное и качественное ведение медицинской документации;</li>
+                  <li>Подготовка стоматологического оборудования к работе, контроль исправности оборудования и
+                    соблюдение техники безопасности при работе с ним;</li>
+                  <li>Уборка кабинета после смены;</li>
+                  <li>Более подробная информация о должностных обязанностях на собеседовании.</li>
+                </ul>
+              </div>
+              <div class="vacancy__col-right">
+                <button type="button" class="vacancy__col-btn">Отправить резюме</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callback bg">
+        <div class="callback__container">
+          <div class="callback__inner">
+            <div class="callback__grid">
+              <div class="callback__col">
+                <div class="callback__image">
+                  <img src="@img/callback.webp" alt="" title="" />
+                </div>
+              </div>
+              <div class="callback__col">
+                <h2 class="callback__title _title">
+                  Запишитесь<br />
+                  <span>на консультацию</span>
+                </h2>
+                <form action="#" class="callback__form">
+                  <input type="text" class="callback__input inp" placeholder="Имя" name="name" />
+                  <input type="text" class="callback__input inp" placeholder="Телефон" name="phone" />
+                  <textarea name="message" class="callback__textarea" placeholder="Сообщение"></textarea>
+                  <div class="callback__personal-info">
+                    <input type="checkbox" id="personal-info" checked />
+                    <label for="personal-info">Согласие с условиями обработки персональных данных</label>
+                  </div>
+                  <button type="submit" class="callback__submit btn">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
