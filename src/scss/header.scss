@@ -211,29 +211,33 @@
       color: $accent;
     }
 
-    &._active {
-      .menu__btn-sub {
-        transform: rotate(180deg);
-      }
-
-    }
-  }
-
-  // .menu__btn-sub
-  &__btn-sub {
-    padding: 10px;
-    transition: $animation_speed;
-
-
   }
 
   // .menu__link
 
   &__link {
     display: flex;
+    align-items: center;
     font-size: 17px;
+    line-height: 150%;
     padding: 10px 0px;
+    cursor: pointer;
     transition: $animation_speed;
+
+    i {
+      padding: 0px 10px;
+      margin-top: 3px;
+    }
+
+    &._active {
+      color: $accent;
+
+      i {
+        transform: rotate(180deg);
+      }
+
+
+    }
   }
 
   // .menu__sub
@@ -268,11 +272,12 @@
 
   &__list {
     padding: 0px 0px 0px 30px;
-    width: 40%;
+    width: 30%;
     margin: 30px 0px 30px 0px;
 
     li {
       position: relative;
+      margin: 10px 0px;
 
       &::before,
       &::after {

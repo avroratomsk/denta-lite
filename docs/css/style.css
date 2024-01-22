@@ -21,10 +21,6 @@ body {
   min-width: 320px;
 }
 
-html {
-  overflow: hidden;
-}
-
 body {
   color: #546272;
   line-height: 1;
@@ -645,26 +641,34 @@ section.bg {
   color: #3390ec;
 }
 
-.menu__item._active .menu__btn-sub {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.menu__btn-sub {
-  padding: 10px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .menu__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 17px;
+  line-height: 150%;
   padding: 10px 0px;
+  cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.menu__link i {
+  padding: 0px 10px;
+  margin-top: 3px;
+}
+
+.menu__link._active {
+  color: #3390ec;
+}
+
+.menu__link._active i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sub-menu {
@@ -701,12 +705,13 @@ section.bg {
 
 .sub-menu__list {
   padding: 0px 0px 0px 30px;
-  width: 40%;
+  width: 30%;
   margin: 30px 0px 30px 0px;
 }
 
 .sub-menu__list li {
   position: relative;
+  margin: 10px 0px;
 }
 
 .sub-menu__list li::before,
@@ -1221,7 +1226,6 @@ section.bg {
   height: clamp(400px, 80vh, 600px);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
   position: relative;
   padding-top: 30px;
@@ -2187,7 +2191,7 @@ Select c dropdown на JS
 
 .single-content__title {
   text-align: center;
-  font-size: clamp(18px, 6em, 50px);
+  font-size: clamp(30px, 2.5vw, 42px);
   font-weight: 600;
   line-height: 140%;
   padding: 40px 0px;
@@ -2277,11 +2281,11 @@ Select c dropdown на JS
 }
 
 .single-about__inner {
-  padding: 40px;
+  padding: clamp(10px, 2.5vw, 40px);
 }
 
 .single-about__title {
-  font-size: clamp(16px, 10em, 35px);
+  font-size: clamp(30px, 2.5vw, 42px);
   margin-bottom: 30px;
   font-weight: 600;
   line-height: 140%;
@@ -2334,11 +2338,11 @@ Select c dropdown на JS
 }
 
 .single-price__title {
-  font-size: clamp(16px, 10em, 35px);
+  font-size: clamp(30px, 2.5vw, 42px);
+  text-wrap: balance;
   margin-bottom: 30px;
   font-weight: 600;
   line-height: 140%;
-  text-transform: uppercase;
 }
 
 .single-price__title span {
@@ -2363,7 +2367,6 @@ Select c dropdown на JS
 
 .table-price__col {
   font-size: 16px;
-  padding: 20px 0xp;
 }
 
 .table-price__id {
@@ -2374,6 +2377,7 @@ Select c dropdown на JS
 .table-price__service {
   padding: 20px 20px;
   border-right: 1px solid rgba(51, 144, 236, 0.2);
+  line-height: 150%;
 }
 
 .table-price__price {
@@ -2389,11 +2393,10 @@ Select c dropdown на JS
 }
 
 .specialist__title {
-  font-size: clamp(16px, 10em, 35px);
+  font-size: clamp(30px, 2.5vw, 42px);
   margin-bottom: 30px;
   font-weight: 600;
   line-height: 140%;
-  text-transform: uppercase;
 }
 
 .specialist__title span {
@@ -3476,6 +3479,50 @@ Select c dropdown на JS
   display: block;
   margin: 0;
   cursor: pointer;
+}
+
+.sitemap {
+  padding: clamp(20px, 10vw, 90px) 0;
+}
+
+.sitemap a {
+  text-decoration: underline;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sitemap a:hover {
+  color: #3390ec;
+}
+
+.sitemap__title {
+  margin-bottom: 40px;
+}
+
+.sitemap__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.sitemap__list-parent {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sitemap__sublist {
+  padding-left: 20px;
+}
+
+.sitemap__sublist li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 0px;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .swiper {
@@ -4763,6 +4810,30 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .table-price__row {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .table-price__id {
+    border-left: 1px solid rgba(51, 144, 236, 0.2);
+  }
+
+  .table-price__service {
+    border-left: 1px solid rgba(51, 144, 236, 0.2);
+  }
+
+  .table-price__price {
+    border-left: 1px solid rgba(51, 144, 236, 0.2);
+    border-right: 1px solid rgba(51, 144, 236, 0.2);
+  }
+
+  .grid-service__cards {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
 @media screen and (max-width: 540px) {
   .popup__title {
     font-size: 25px;
@@ -4771,6 +4842,25 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 531px) {
   .rating__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .single-content__menu-link {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+
+  .single-content__menu-link button {
+    border: 1px solid rgba(84, 98, 114, 0.1);
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

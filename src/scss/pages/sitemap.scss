@@ -1,0 +1,59 @@
+.sitemap {
+  padding: clamp(20px, 10vw, 90px) 0;
+
+  a {
+    text-decoration: underline;
+    transition: $animation_speed;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  // .sitemap__container
+
+  &__container {}
+
+  // .sitemap__title
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  // .sitemap__list
+
+  &__list {}
+
+  // .sitemap__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .sitemap__list-parent
+
+  &__list-parent {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  // .sitemap__sublist
+
+  &__sublist {
+    padding-left: 20px;
+
+    li {
+
+      a {
+        display: flex;
+        padding: 5px 0px;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+}
