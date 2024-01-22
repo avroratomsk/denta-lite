@@ -6,7 +6,7 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="single-page">
-      <div class="single-banner" style="background-image: url(../img/mostovidnoe-protez.webp);">
+      <div class="single-banner" style="background-image: url(../img/mostovidnoe-protez.webp);" data-speed="70">
         <div class="single-banner__container">
           @@include('html/breadcrumbs.html',{ "title":"Услуга"})
         </div>
@@ -142,10 +142,10 @@
         </div>
       </div>
 
-      <div class="single-license license" id="single-license">
+      <section class="single-license license" id="single-license">
         <div class="license__container">
           <div class="license__top">
-            <h2 class="license__title"><span>Лицензии</span> нашей клиники</h2>
+            <h2 class="license__title _title"><span>Лицензии</span> нашей клиники</h2>
             <div class="swiper-pagination license-pagination"></div>
           </div>
           <div class="license__slider swiper">
@@ -173,7 +173,7 @@
             <div class="license-button-next swiper-button-next"></div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section class="service__grid grid-service">
         <div class="grid-service__container">

@@ -4396,6 +4396,21 @@
             if (inputHideEnrollPopup) inputHideEnrollPopup.value = dataName; else alert("Нету такого инпута");
         }));
     }));
+    let anchorLink = document.querySelectorAll("[data-anchor]");
+    if (anchorLink) anchorLink.forEach((link => {
+        link.addEventListener("click", (function(e) {
+            let idElem = this.dataset.anchor;
+            let elemToScroll = document.getElementById(idElem);
+            let elemPosition = elemToScroll.getBoundingClientRect().top;
+            let headerHeight = document.querySelector("header").clientHeight;
+            let scrollingHeight = elemPosition - headerHeight;
+            window.scrollTo({
+                top: scrollingHeight,
+                left: 0,
+                behavior: "smooth"
+            });
+        }));
+    }));
     const submenuTrigerBtn = document.querySelector("#submenu-show");
     if (submenuTrigerBtn) submenuTrigerBtn.addEventListener("click", (function(e) {
         this.classList.toggle("_active");
@@ -4450,6 +4465,15 @@
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
             document.querySelector(".menu-mb").classList.remove("_show-menu");
+        }
+    }));
+    window.addEventListener("scroll", (function(e) {
+        let top = this.pageYOffset;
+        const singleBanner = document.querySelector(".single-banner");
+        if (singleBanner) {
+            let speed = singleBanner.dataset.speed;
+            let yPos = -top * speed / 100;
+            singleBanner.style.backgroundPosition = "0% " + yPos + "px";
         }
     }));
     window["FLS"] = true;

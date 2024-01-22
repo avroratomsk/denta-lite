@@ -27,7 +27,7 @@
 
   &__title {
     text-align: center;
-    font-size: clamp(18px, 6em, 50px);
+    font-size: clamp(30px, 2.5vw, 42px);
     font-weight: 600;
     line-height: 140%;
     padding: 40px 0px;
@@ -50,6 +50,12 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 525px) {
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+    }
+
     button {
       display: flex;
       align-items: center;
@@ -57,6 +63,12 @@
       font-size: 18px;
       position: relative;
       transition: $animation_speed;
+
+      @media screen and (max-width: 525px) {
+        border: 1px solid rgba($color: $mainColor, $alpha: .1);
+        width: 100%;
+        justify-content: center;
+      }
 
       &:hover {
         &::before {
@@ -110,13 +122,13 @@
 
   // .single-about__inner
   &__inner {
-    padding: 40px;
+    padding: clamp(10px, 2.5vw, 40px);
   }
 
   // .single-about__title
 
   &__title {
-    font-size: clamp(16px, 10em, 35px);
+    font-size: clamp(30px, 2.5vw, 42px);
     margin-bottom: 30px;
     font-weight: 600;
     line-height: 140%;
@@ -189,11 +201,11 @@
   // .single-price__title
 
   &__title {
-    font-size: clamp(16px, 10em, 35px);
+    font-size: clamp(30px, 2.5vw, 42px);
+    text-wrap: balance;
     margin-bottom: 30px;
     font-weight: 600;
     line-height: 140%;
-    text-transform: uppercase;
 
     span {
       color: $accent;
@@ -219,13 +231,16 @@
     &:first-child {
       border-top: 1px solid rgba($color: $accent, $alpha: .2);
     }
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .table-price__col
 
   &__col {
     font-size: 16px;
-    padding: 20px 0xp;
   }
 
   // .table-price__id
@@ -233,6 +248,10 @@
   &__id {
     padding: 20px 20px;
     border-right: 1px solid rgba($color: $accent, $alpha: .2);
+
+    @media screen and (max-width: 575px) {
+      border-left: 1px solid rgba($color: $accent, $alpha: .2);
+    }
   }
 
   // .table-price__service
@@ -240,6 +259,11 @@
   &__service {
     padding: 20px 20px;
     border-right: 1px solid rgba($color: $accent, $alpha: .2);
+    line-height: 150%;
+
+    @media screen and (max-width: 575px) {
+      border-left: 1px solid rgba($color: $accent, $alpha: .2);
+    }
   }
 
   // .table-price__price
@@ -249,6 +273,11 @@
 
     span {
       font-weight: 700;
+    }
+
+    @media screen and (max-width: 575px) {
+      border-left: 1px solid rgba($color: $accent, $alpha: .2);
+      border-right: 1px solid rgba($color: $accent, $alpha: .2);
     }
   }
 }
@@ -260,11 +289,10 @@
 
   // .specialist__title
   &__title {
-    font-size: clamp(16px, 10em, 35px);
+    font-size: clamp(30px, 2.5vw, 42px);
     margin-bottom: 30px;
     font-weight: 600;
     line-height: 140%;
-    text-transform: uppercase;
 
     span {
       color: $accent;
