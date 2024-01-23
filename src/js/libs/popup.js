@@ -207,8 +207,8 @@ class Popup {
 				}
 				if (this.options.hashSettings.location) {
 					// Получение хэша и его выставление 
-					this._getHash();
-					this._setHash();
+					// this._getHash();
+					// this._setHash();
 				}
 
 				// До открытия

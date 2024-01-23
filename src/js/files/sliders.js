@@ -153,8 +153,8 @@ function initSliders() {
 
       // Кнопки "влево/вправо"
       navigation: {
-        prevEl: '.index-button-prev',
-        nextEl: '.index-button-next',
+        prevEl: '.index-doctor-prev',
+        nextEl: '.index-doctor-next',
       },
 
       // navigation: {
@@ -178,7 +178,7 @@ function initSliders() {
           spaceBetween: 20,
         },
         1268: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 20,
         },
       },

@@ -6,7 +6,46 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
-      <section class="index-slider">
+      <div class="index bg">
+        <div class="index__container">
+          <div class="index__row">
+            <div class="index__col grid-col">
+              <div class="grid-col__row">
+                <h1 class="grid-col__title">
+                  Стоматология<br>
+                  Дент-Лайт
+                </h1>
+                <p class="grid-col__subtitle">Красота и здоровье зубов</p>
+              </div>
+              <div class="grid-col__row">
+                <a href="#" class="grid-col__card" style="background-image: url(../img/service/gigiena.webp);"></a>
+                <a href="#" class="grid-col__card"
+                  style="background-image: url(../img/service/elaineri-breketi.webp);"></a>
+              </div>
+              <div class="grid-col__row">
+                <div class="grid-col__row-leftside">
+                  <a href="#">Ортопедия</a>
+                  <a href="#">Зубное протезирование система CAD/CAM</a>
+                </div>
+                <div class="grid-col__row-rightside">
+                  <button type="button">Записаться на прием</button>
+                </div>
+              </div>
+            </div>
+            <div class="index__col image-col" style="background-image: url(../img/banner-women.png);">
+              <div class="image-col__card">
+                <p>Процесс установки съемных имплантов</p>
+                <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+              <div class="image-col__card">
+                <p>Отбеливание <br>зубов</p>
+                <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <section class="index-slider">
         <div class="index-slider__inner">
           <div class="index-slider__slider swiper">
             <div class="index-slider__wrapper swiper-wrapper">
@@ -37,12 +76,13 @@
                 </p>
                 <button type="button" class="btn index-slider__btn">Подробнее</button>
               </div>
+
             </div>
             <div class="index-button-prev swiper-button-prev"></div>
             <div class="index-button-next swiper-button-next"></div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="index-service">
         <div class="index-service__container">
@@ -206,70 +246,73 @@
             <div class="index-doctors__slider swiper">
               <div class="index-doctors__wrapper swiper-wrapper">
                 <div class="index-doctors__slide swiper-slide">
-                  <div class="index-doctors__leftside">
-                    <a href="#">
-                      <img src="@img/doctor.jpg" alt="" />
+                  <div class="specialisty__item">
+                    <a href="" class="specialisty__image">
+                      <img src="@img/doctor.jpg" alt="" title="">
                     </a>
-                  </div>
-                  <div class="index-doctors__rightside">
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="index-doctors__rightside-name">Иванов Иван Иванович</a>
-                      <span class="index-doctors__rightside-spec">Врач-стоматолог-терапевт</span>
-                    </div>
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="btn index-doctors__rightside-btn">Подробнее</a>
+                    <div class="specialisty__info">
+                      <a href="" class="specialisty__name">Иванов Иван Иванович</a>
+                      <div class="specialisty__spec">
+                        Врач-стоматолог-терапевт
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="index-doctors__slide swiper-slide">
-                  <div class="index-doctors__leftside">
-                    <a href="#">
-                      <img src="@img/doctor.jpg" alt="" />
+                  <div class="specialisty__item">
+                    <a href="" class="specialisty__image">
+                      <img src="@img/doctor.jpg" alt="" title="">
                     </a>
-                  </div>
-                  <div class="index-doctors__rightside">
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="index-doctors__rightside-name">Иванов Иван Иванович</a>
-                      <span class="index-doctors__rightside-spec">Врач-стоматолог-терапевт</span>
-                    </div>
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="btn index-doctors__rightside-btn">Подробнее</a>
+                    <div class="specialisty__info">
+                      <a href="" class="specialisty__name">Иванов Иван Иванович</a>
+                      <div class="specialisty__spec">
+                        Врач-стоматолог-терапевт
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="index-doctors__slide swiper-slide">
-                  <div class="index-doctors__leftside">
-                    <a href="#">
-                      <img src="@img/doctor.jpg" alt="" />
+                  <div class="specialisty__item">
+                    <a href="" class="specialisty__image">
+                      <img src="@img/doctor.jpg" alt="" title="">
                     </a>
-                  </div>
-                  <div class="index-doctors__rightside">
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="index-doctors__rightside-name">Иванов Иван Иванович</a>
-                      <span class="index-doctors__rightside-spec">Врач-стоматолог-терапевт</span>
-                    </div>
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="btn index-doctors__rightside-btn">Подробнее</a>
+                    <div class="specialisty__info">
+                      <a href="" class="specialisty__name">Иванов Иван Иванович</a>
+                      <div class="specialisty__spec">
+                        Врач-стоматолог-терапевт
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="index-doctors__slide swiper-slide">
-                  <div class="index-doctors__leftside">
-                    <a href="#">
-                      <img src="@img/doctor.jpg" alt="" />
+                  <div class="specialisty__item">
+                    <a href="" class="specialisty__image">
+                      <img src="@img/doctor.jpg" alt="" title="">
                     </a>
-                  </div>
-                  <div class="index-doctors__rightside">
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="index-doctors__rightside-name">Иванов Иван Иванович</a>
-                      <span class="index-doctors__rightside-spec">Врач-стоматолог-терапевт</span>
+                    <div class="specialisty__info">
+                      <a href="" class="specialisty__name">Иванов Иван Иванович</a>
+                      <div class="specialisty__spec">
+                        Врач-стоматолог-терапевт
+                      </div>
                     </div>
-                    <div class="index-doctors__rightside-inherit">
-                      <a href="" class="btn index-doctors__rightside-btn">Подробнее</a>
+                  </div>
+                </div>
+                <div class="index-doctors__slide swiper-slide">
+                  <div class="specialisty__item">
+                    <a href="" class="specialisty__image">
+                      <img src="@img/doctor.jpg" alt="" title="">
+                    </a>
+                    <div class="specialisty__info">
+                      <a href="" class="specialisty__name">Иванов Иван Иванович</a>
+                      <div class="specialisty__spec">
+                        Врач-стоматолог-терапевт
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button type="button" class="index-doctor-prev swiper-button-prev"></button>
+              <button type="button" class="index-doctor-next swiper-button-next"></button>
             </div>
           </div>
         </div>
@@ -369,10 +412,7 @@
                     <div class="reviews__content">
                       <div class="reviews__text">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                        a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                        porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                        laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                        quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                        a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa.
                       </div>
                       <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь
                         отзыв</button>
@@ -472,8 +512,8 @@
       </section>
     </main>
     @@include('html/_footer.htm',{})
+
   </div>
-  @@include('html/_popup.htm',{})
   @@include('html/_js.htm',{})
 </body>
 

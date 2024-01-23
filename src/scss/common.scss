@@ -19,7 +19,7 @@ main {
 
 section {
   &:not(:first-child) {
-    padding: clamp(20px, 10vw, 90px) 0px;
+    padding: clamp(20px, 10vw, 50px) 0px;
   }
 
   &.bg {

@@ -401,10 +401,7 @@
                         }
                         this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
                     }
-                    if (this.options.hashSettings.location) {
-                        this._getHash();
-                        this._setHash();
-                    }
+                    if (this.options.hashSettings.location) ;
                     this.options.on.beforeOpen(this);
                     document.dispatchEvent(new CustomEvent("beforePopupOpen", {
                         detail: {
@@ -4214,8 +4211,8 @@
                 dynamicBullets: false
             },
             navigation: {
-                prevEl: ".index-button-prev",
-                nextEl: ".index-button-next"
+                prevEl: ".index-doctor-prev",
+                nextEl: ".index-doctor-next"
             },
             breakpoints: {
                 320: {
@@ -4232,7 +4229,7 @@
                     spaceBetween: 20
                 },
                 1268: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 20
                 }
             },
