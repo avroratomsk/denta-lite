@@ -20,7 +20,7 @@
   // .doctor__image
 
   &__image {
-    min-height: 400px;
+
 
     img {
       max-width: 100%;
@@ -29,6 +29,7 @@
 
     @media screen and (min-width: 895px) {
       width: 30%;
+      min-height: 400px;
     }
   }
 

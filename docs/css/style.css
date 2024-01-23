@@ -3689,10 +3689,6 @@ Select c dropdown на JS
   margin-bottom: 40px;
 }
 
-.doctor__image {
-  min-height: 400px;
-}
-
 .doctor__image img {
   max-width: 100%;
   height: 100%;
@@ -4648,6 +4644,7 @@ button.swiper-pagination-bullet {
 @media screen and (min-width: 895px) {
   .doctor__image {
     width: 30%;
+    min-height: 400px;
   }
 }
 
