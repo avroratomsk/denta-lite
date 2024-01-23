@@ -172,6 +172,10 @@ if (bodyElement) {
 }
 
 
+new VenoBox({
+  selector: ".venobox"
+});
+
 /**
  * Паралакс на баннере 
  */
