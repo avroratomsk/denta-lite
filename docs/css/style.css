@@ -135,6 +135,8 @@ body {
 body::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -164,6 +166,7 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  text-align: center;
 }
 
 .popup_show {
@@ -213,7 +216,7 @@ body::after {
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  background-color: #eee;
+  background-color: #ffffff;
   padding: 40px 40px 60px;
   width: 100%;
   max-width: 800px;
@@ -224,12 +227,84 @@ body::after {
   visibility: visible;
 }
 
+.popup__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  color: red;
+  width: 40px;
+  height: 40px;
+}
+
 .popup__title {
-  font-size: 35px;
+  font-size: clamp(25px, 2.5vw, 35px);
   text-align: center;
   font-weight: 600;
   color: #546272;
   margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.popup__title span {
+  color: #3390ec;
+}
+
+.popup__subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 150%;
+}
+
+.popup__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.popup__control {
+  border: 1px solid rgba(84, 98, 114, 0.2);
+  padding: 20px 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.popup__control:focus {
+  border-color: rgba(84, 98, 114, 0.5);
+}
+
+.popup__select {
+  border: 1px solid rgba(84, 98, 114, 0.2);
+  padding: 20px 20px;
+  border-radius: 5px;
+  color: rgba(84, 98, 114, 0.8);
+  font-weight: 200 !important;
+}
+
+.popup__submit {
+  width: 100%;
+  height: 60px;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #3390ec;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.popup__submit:hover {
+  opacity: 0.9;
+}
+
+.popup__text {
+  font-size: 17px;
+  line-height: 150%;
   margin-top: 20px;
 }
 
@@ -2723,6 +2798,10 @@ Select c dropdown на JS
   position: relative;
 }
 
+.specialisty__title {
+  margin-bottom: 30px;
+}
+
 .specialisty__quote-lf {
   position: absolute;
   top: 20px;
@@ -3001,6 +3080,41 @@ Select c dropdown на JS
 .about__subtitle {
   font-size: 16px;
   line-height: 150%;
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+  line-height: 150%;
+}
+
+.text ul {
+  margin-left: 15px;
+}
+
+.text ul li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 150%;
+}
+
+.text ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.text ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background-color: #3390ec;
+  border-radius: 50%;
 }
 
 .text p {
@@ -3569,6 +3683,55 @@ Select c dropdown на JS
   padding: 5px 0px;
   font-size: 16px;
   line-height: 150%;
+}
+
+.doctor__row {
+  margin-bottom: 40px;
+}
+
+.doctor__image {
+  min-height: 400px;
+}
+
+.doctor__image img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.doctor__content {
+  margin-top: 30px;
+}
+
+.doctor__name {
+  font-size: clamp(25px, 2vw, 35px);
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.doctor__spec {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+
+.doctor__label {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+
+.doctor__list li {
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.doctor__list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.doctor__dop-title {
+  margin-bottom: 30px;
 }
 
 .swiper {
@@ -4468,6 +4631,24 @@ button.swiper-pagination-bullet {
   .reviews-add__col {
     width: 50%;
   }
+
+  .doctor__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+  }
+
+  .doctor__content {
+    width: 50%;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 895px) {
+  .doctor__image {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 920px) {
@@ -4877,12 +5058,6 @@ button.swiper-pagination-bullet {
 
   .grid-service__cards {
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .popup__title {
-    font-size: 25px;
   }
 }
 

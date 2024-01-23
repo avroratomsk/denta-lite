@@ -4467,9 +4467,6 @@
             document.querySelector(".menu-mb").classList.remove("_show-menu");
         }
     }));
-    new VenoBox({
-        selector: ".venobox"
-    });
     window.addEventListener("scroll", (function(e) {
         let top = this.pageYOffset;
         const singleBanner = document.querySelector(".single-banner");
@@ -4479,6 +4476,17 @@
             singleBanner.style.backgroundPosition = "0% " + yPos + "px";
         }
     }));
+    const reviewsButtons = document.querySelectorAll(".reviews__btn");
+    if (reviewsButtons) reviewsButtons.forEach((btn => {
+        btn.addEventListener("click", getReviewsText);
+    }));
+    function getReviewsText(e) {
+        let previeousElement = this.previousElementSibling.innerText;
+        console.log(previeousElement);
+        const openPopup = document.querySelector(".popup-reviews");
+        let popupContent = openPopup.querySelector(".popup__text");
+        popupContent.innerText += previeousElement;
+    }
     window["FLS"] = true;
     isWebp();
     menuInit();

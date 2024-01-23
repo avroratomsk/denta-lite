@@ -24,6 +24,42 @@
 }
 
 .text {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 150%;
+  }
+
+  ul {
+    margin-left: 15px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      line-height: 150%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+        background-color: rgba($color: $accent, $alpha: 1.0);
+        border-radius: 50%;
+      }
+    }
+  }
+
   p {
     font-size: 16px;
     line-height: 150%;

@@ -1,4 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
+// import { log } from "gulp-util";
 import { bodyUnlock, isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
@@ -172,9 +173,9 @@ if (bodyElement) {
 }
 
 
-new VenoBox({
-  selector: ".venobox"
-});
+// new VenoBox({
+//   selector: ".venobox"
+// });
 
 /**
  * Паралакс на баннере 
@@ -192,9 +193,26 @@ window.addEventListener("scroll", function (e) {
 
     singleBanner.style.backgroundPosition = '0% ' + yPos + 'px';
   }
-
-
 })
+
+
+
+const reviewsButtons = document.querySelectorAll('.reviews__btn');
+if (reviewsButtons) {
+  reviewsButtons.forEach(btn => {
+    btn.addEventListener('click', getReviewsText)
+  })
+}
+
+function getReviewsText(e) {
+  let previeousElement = this.previousElementSibling.innerText;
+  console.log(previeousElement);
+  const openPopup = document.querySelector('.popup-reviews');
+  // console.log(openPopup);
+  let popupContent = openPopup.querySelector('.popup__text');
+  // console.log(popupContent);
+  popupContent.innerText += previeousElement;
+}
 
 
 
