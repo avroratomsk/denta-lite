@@ -4467,6 +4467,9 @@
             document.querySelector(".menu-mb").classList.remove("_show-menu");
         }
     }));
+    new VenoBox({
+        selector: ".venobox"
+    });
     window.addEventListener("scroll", (function(e) {
         let top = this.pageYOffset;
         const singleBanner = document.querySelector(".single-banner");
