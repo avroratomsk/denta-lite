@@ -13,13 +13,24 @@ body::-webkit-scrollbar-thumb {
   /* цвет бегунка */
 }
 
+/*
+*** Custom style slider swiper 
+*/
+
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    font-size: 14px !important;
+  }
+}
+
 main {
-  margin-top: clamp(60px, 13vw, 160px);
+  margin-top: clamp(60px, 13vw, 130px);
 }
 
 section {
   &:not(:first-child) {
-    padding: clamp(20px, 10vw, 50px) 0px;
+    padding: clamp(20px, 5vw, 50px) 0px;
   }
 
   &.bg {
@@ -44,10 +55,10 @@ section {
 .btn {
   display: inline-flex;
   font-weight: 600;
-  text-transform: uppercase;
   padding: 15px 30px;
   border: 1px solid rgba($color: $mainColor, $alpha: 1);
   position: relative;
+  border-radius: 4px;
   transition: $animation_speed;
 
   &::before {
@@ -74,7 +85,7 @@ section {
 }
 
 ._title {
-  font-size: clamp(30px, 2.5vw, 42px);
+  font-size: clamp(30px, 2.5vw, 35px);
   font-weight: 800;
   line-height: 150%;
 

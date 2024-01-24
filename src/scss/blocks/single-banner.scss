@@ -1,5 +1,5 @@
 .single-banner {
-  height: clamp(400px, 80vh, 600px);
+  height: clamp(430px, 30vw, 630px);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -63,7 +63,7 @@
     padding: 20px 40px;
     border: 1px solid rgba($color: $white, $alpha: 1.0);
     color: $white;
-    font-size: 18px;
+    border-radius: 6px;
     font-weight: 600;
     position: relative;
     transition: $animation_speed;

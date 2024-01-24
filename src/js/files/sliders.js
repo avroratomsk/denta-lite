@@ -33,7 +33,7 @@ function initSliders() {
     new Swiper('.index-slider__slider', { // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Pagination, Autoplay],
+      modules: [Navigation, Pagination, Autoplay, EffectFade],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -50,7 +50,7 @@ function initSliders() {
 
 
       // Эффекты
-      // effect: 'fade',
+      effect: 'fade',
       autoplay: {
         delay: 10000,
         disableOnInteraction: false,
@@ -118,6 +118,7 @@ function initSliders() {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
+      slidesPerGroup: 4,
       spaceBetween: 20,
       autoHeight: true,
       speed: 800,

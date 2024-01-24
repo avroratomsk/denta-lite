@@ -1,5 +1,6 @@
 .index-slider {
-  margin-bottom: 90px;
+  margin-bottom: clamp(20px, 10vw, 50px);
+  padding: 0px 15px;
 
   @media screen and (max-width: 425px) {
     margin-bottom: 40px;
@@ -45,7 +46,7 @@
     min-height: 650px;
     padding: 0px clamp(20px, 5.5vw, 120px);
     overflow: hidden;
-    box-shadow: 0px 0px 10px 0px rgba($color: $mainColor, $alpha: .4);
+    // box-shadow: 0px 0px 10px 0px rgba($color: $mainColor, $alpha: .4);
     border-radius: 25px;
 
 
@@ -136,7 +137,6 @@
     border-radius: 50%;
 
     &::after {
-      font-size: 16px;
       color: $accent;
       font-weight: 700;
     }
@@ -145,7 +145,7 @@
   .swiper-button-next,
   .swiper-button-prev {
     @media screen and (max-width: 992px) {
-      top: 90%;
+      top: 93%;
     }
   }
 }
@@ -273,7 +273,6 @@
     button {
       background-color: rgba($color: $white, $alpha: 1.0);
       padding: 20px 30px;
-      font-size: 16px;
       border-radius: 15px;
       font-weight: 600;
     }
@@ -444,7 +443,6 @@
 
   &__text {
     p {
-      font-size: 16px;
       font-weight: 300;
       line-height: 150%;
 
@@ -515,7 +513,6 @@
     background-color: rgba($color: $accent, $alpha: 1.0);
 
     &::after {
-      font-size: 16px;
       color: rgba($color: $white, $alpha: 1.0);
     }
   }
@@ -523,33 +520,19 @@
 
 .index-service {
   background-color: rgba($color: $accent, $alpha: .05);
-  border-radius: 20px; // .index-service__container
+
+  // .index-service__container
 
   &__container {}
 
   // .index-service__inner
 
   &__inner {
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      gap: 40px;
-    }
-  }
-
-  // .index-service__grid
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    display: flex;
     gap: 40px;
 
-    @media screen and (max-width: 1456px) {
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    }
-
-    @media screen and (min-width: 768px) {
-      flex: 0 0 70%;
-      gap: 80px;
+    @media screen and (max-width: 1125px) {
+      flex-direction: column;
     }
   }
 
@@ -559,30 +542,51 @@
     top: 180px;
   }
 
+  // .index-service__grid
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (min-width: 1125px) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: 732px) {
+      flex-direction: column;
+    }
+
+    .index-service__col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      &:nth-child(1) {
+
+        @media screen and (min-width: 1125px) {
+          width: 50%;
+          margin-top: 40px;
+        }
+      }
+
+      &:nth-child(2) {
+        @media screen and (min-width: 1125px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+
   // .index-service__col
 
   &__col {
     position: relative;
 
-    // .index-service__col--first
-    &--first {
-      display: flex;
-      flex-direction: column;
-      margin-top: 100px;
-      align-items: center;
-      gap: 40px;
-
-      @media screen and (max-width: 656px) {
-        margin-top: 60px;
+    &:nth-child(1) {
+      @media screen and (min-width: 1125px) {
+        width: 40%;
       }
-    }
-
-    // .index-service__col--second
-    &--second {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
     }
   }
 
@@ -595,7 +599,6 @@
   // .index-service__subtitle
 
   &__subtitle {
-    font-size: 17px;
     font-style: normal;
     font-weight: 300;
     line-height: 150%;
@@ -635,7 +638,7 @@
       &:hover {
         .index-service__image {
           img {
-            transform: scale(1.2);
+            transform: scale(1.05);
           }
         }
       }
@@ -644,15 +647,21 @@
 
   // .index-service__image
   &__image {
-    overflow: hidden;
+    overflow: hidden !important;
+    border-radius: 6px;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: 100%;
       transition: $animation_speed;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1125px) {
+      width: 290px;
+      height: 400px;
+    }
+
+    @media screen and (min-width: 768px) {
       width: 390px;
       height: 500px;
     }
@@ -665,16 +674,17 @@
     position: absolute;
     background-color: $accent;
     color: $white;
-    padding: 20px 20px;
+    padding: 15px 15px;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 600;
     line-height: 150%;
+    border-radius: 4px;
 
     @media screen and (min-width: 920px) {
-      width: 470px;
-      font-size: 16px;
-      padding: 20px 40px;
+      width: 100%;
+      font-size: 11px;
+      padding: 20px 10px;
     }
 
     img,
@@ -690,31 +700,28 @@
     // .index-service__content--first
     &--first {
       @media screen and (min-width: 920px) {
-        left: -40px;
+        left: -10px;
       }
     }
 
     // .index-service__content--second
     &--second {
       @media screen and (min-width: 920px) {
-        width: 290px;
-        right: -40px;
+        right: -10px;
       }
     }
 
     // .index-service__content--third
     &--third {
       @media screen and (min-width: 920px) {
-        width: 380px;
-        right: 60px;
+        right: 20px;
       }
     }
 
     // .index-service__content--fourth
     &--fourth {
       @media screen and (min-width: 920px) {
-        width: 260px;
-        right: -40px;
+        right: -10px;
       }
     }
 
@@ -950,7 +957,6 @@
   // .reviews__date
 
   &__date {
-    font-size: 16px;
     font-weight: 600;
 
     @media screen and (min-width: 425px) {
@@ -1080,7 +1086,6 @@
 
   &__item {
     display: flex;
-    font-size: 16px;
     margin-bottom: 30px;
 
     img {

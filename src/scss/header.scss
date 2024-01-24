@@ -28,7 +28,7 @@
     padding: 10px 0px;
 
     @media screen and (min-width: 920px) {
-      border-bottom: 1px dashed rgba($color: $mainColor, $alpha: .3);
+      border-bottom: 1px dashed rgba($color: $mainColor, $alpha: .2);
     }
   }
 
@@ -37,7 +37,9 @@
   &__logo {
     display: flex;
 
-    img {}
+    img {
+      width: 35px;
+    }
 
     div {
       display: flex;
@@ -48,10 +50,12 @@
       span {
         color: $accent;
 
-        &:first-child {}
+        &:first-child {
+          font-size: 14px;
+        }
 
         &:last-child {
-          font-size: 34px;
+          font-size: 30px;
         }
       }
     }
@@ -116,15 +120,17 @@
   // .top-header__phone
 
   &__phone {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
-    margin: 7px 0px;
+    // margin: 7px 0px;
   }
 
   // .top-header__time
 
-  &__time {}
+  &__time {
+    font-size: 13px;
+  }
 
   // .top-header__logo
 
@@ -137,15 +143,12 @@
   // .top-header__btn
 
   &__btn {
-    width: 290px;
-    height: 60px;
+    width: 250px;
+    height: 50px;
     background-color: $accent;
     color: $white;
-    font-size: 18px;
     font-weight: 600;
-    border-radius: 5px;
-    // border-top-right-radius: 24px;
-    // border-bottom-left-radius: 24px;
+    border-radius: 6px;
 
     @media screen and (max-width: 920px) {
       display: none;
@@ -163,7 +166,6 @@
       justify-content: center;
       order: 2;
       font-size: 25px;
-      // color: $white;
     }
   }
 }
@@ -182,7 +184,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0px;
+  // padding: 15px 0px;
 
   // .menu__item
 
@@ -191,9 +193,6 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    border-right: 1px solid rgba($color: $mainColor, $alpha: .1);
-    border-left: 1px solid rgba($color: $mainColor, $alpha: .1);
-    padding: 0px clamp(20px, 2vw, 40px);
 
     &:first-child {
       border-left: 0px;
@@ -218,15 +217,15 @@
   &__link {
     display: flex;
     align-items: center;
-    font-size: 17px;
     line-height: 150%;
-    padding: 10px 0px;
+    padding: 15px clamp(20px, 2vw, 40px);
     cursor: pointer;
     transition: $animation_speed;
 
     i {
-      padding: 0px 10px;
+      padding: 0px 7px;
       margin-top: 3px;
+      font-size: 14px;
     }
 
     &._active {

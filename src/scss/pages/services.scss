@@ -106,12 +106,8 @@
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(383px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: 30px;
-
-    @media screen and (max-width: 575px) {
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    }
   }
 
   // .grid-service__card
