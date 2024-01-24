@@ -118,7 +118,6 @@ function initSliders() {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
-      slidesPerGroup: 4,
       spaceBetween: 20,
       autoHeight: true,
       speed: 800,

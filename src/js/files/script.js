@@ -172,17 +172,20 @@ if (bodyElement) {
   })
 }
 
+let venoBoxGalleryItem = document.querySelectorAll('.venobox');
 
-// new VenoBox({
-//   selector: ".venobox"
-// });
+if (venoBoxGalleryItem) {
+  new VenoBox({
+    selector: ".venobox"
+  });
+}
+
 
 /**
  * Паралакс на баннере 
  */
 
 window.addEventListener("scroll", function (e) {
-
   let top = this.pageYOffset;
 
   const singleBanner = document.querySelector('.single-banner');

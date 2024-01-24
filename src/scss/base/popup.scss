@@ -131,6 +131,10 @@ body::after {
   &:focus {
     border-color: rgba($color: $mainColor, $alpha: .5);
   }
+
+  &.error {
+    border-color: brown;
+  }
 }
 
 .popup__select {

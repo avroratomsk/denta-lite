@@ -152,6 +152,10 @@
       color: rgba($color: $mainColor, $alpha: .6);
       font-weight: 500;
     }
+
+    &.error {
+      border-color: brown;
+    }
   }
 
   // .form-contact__textarea

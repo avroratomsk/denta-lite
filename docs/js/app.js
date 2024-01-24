@@ -4342,7 +4342,6 @@
             observer: true,
             observeParents: true,
             slidesPerView: 3,
-            slidesPerGroup: 4,
             spaceBetween: 20,
             autoHeight: true,
             speed: 800,
@@ -4610,6 +4609,10 @@
             document.querySelector(".menu-mb").classList.remove("_show-menu");
         }
     }));
+    let venoBoxGalleryItem = document.querySelectorAll(".venobox");
+    if (venoBoxGalleryItem) new VenoBox({
+        selector: ".venobox"
+    });
     window.addEventListener("scroll", (function(e) {
         let top = this.pageYOffset;
         const singleBanner = document.querySelector(".single-banner");

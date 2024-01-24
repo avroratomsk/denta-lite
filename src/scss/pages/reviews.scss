@@ -22,6 +22,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 30px;
+
+    @media screen and (min-width: 420px) {
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
   }
 
   .reviews__slide {}
@@ -85,6 +89,10 @@
     padding: 15px 0px;
     outline: none;
 
+    &.error {
+      border-color: brown;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -141,7 +149,9 @@
 
   // .form-reviews__btn
 
-  &__btn {}
+  &__btn {
+    align-self: flex-start;
+  }
 }
 
 .active {}
