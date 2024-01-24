@@ -21,10 +21,6 @@ body {
   min-width: 320px;
 }
 
-html {
-  overflow: hidden;
-}
-
 body {
   color: #546272;
   line-height: 1;
