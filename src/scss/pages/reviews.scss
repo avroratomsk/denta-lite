@@ -73,6 +73,32 @@
   // .reviews-add__form
 
   &__form {}
+
+
+}
+
+.form-reviews__stars-cnt {}
+
+.form-reviews__stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.form-reviews__star {
+  transition: $animation_speed;
+}
+
+.form-reviews__star:hover,
+.form-reviews__star:hover~.form-reviews__star {
+  background-position: 0px -1px;
+}
+
+.form-reviews__stars[data-rating-total="1"] .form-reviews__star:nth-child(n+5),
+.form-reviews__stars[data-rating-total="2"] .form-reviews__star:nth-child(n+4),
+.form-reviews__stars[data-rating-total="3"] .form-reviews__star:nth-child(n+3),
+.form-reviews__stars[data-rating-total="4"] .form-reviews__star:nth-child(n+2),
+.form-reviews__stars[data-rating-total="5"] .form-reviews__star:nth-child(n+1) {
+  background-position: 0px -1px;
 }
 
 

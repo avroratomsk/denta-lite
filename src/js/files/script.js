@@ -37,6 +37,7 @@ if (buttonsEnroll) {
  * Скролл до элемента на посадочной странице услуги
  */
 
+
 let anchorLink = document.querySelectorAll('[data-anchor]');
 
 if (anchorLink) {
@@ -46,7 +47,7 @@ if (anchorLink) {
       let elemToScroll = document.getElementById(idElem);
 
       let elemPosition = elemToScroll.getBoundingClientRect().top;
-      let headerHeight = document.querySelector('header').clientHeight;
+      let headerHeight = document.querySelector('.header').clientHeight;
 
       let scrollingHeight = elemPosition - headerHeight;
 
@@ -174,19 +175,26 @@ if (bodyElement) {
 
 let venoBoxGalleryItem = document.querySelectorAll('.venobox');
 
-if (venoBoxGalleryItem) {
-  new VenoBox({
-    selector: ".venobox"
-  });
-}
+// if (venoBoxGalleryItem) {
+//   new VenoBox({
+//     selector: ".venobox"
+//   });
+// }
 
 
 /**
  * Паралакс на баннере 
  */
 
-window.addEventListener("scroll", function (e) {
-  let top = this.pageYOffset;
+const header = document.querySelector('.header');
+
+window.addEventListener("scroll", function (event) {
+  parralaxSingleBanner();
+  headerSticky()
+})
+
+function parralaxSingleBanner(e) {
+  let top = window.pageYOffset;
 
   const singleBanner = document.querySelector('.single-banner');
   if (singleBanner) {
@@ -196,7 +204,40 @@ window.addEventListener("scroll", function (e) {
 
     singleBanner.style.backgroundPosition = '0% ' + yPos + 'px';
   }
-})
+}
+
+function headerSticky() {
+  let top = window.pageYOffset;
+
+  if (top > 900) {
+    header.classList.add('_fixed-header');
+    document.body.style.paddingTop = `${header.clientHeight}px`;
+  } else {
+    header.classList.remove('_fixed-header');
+    document.body.style.paddingTop = "0px";
+  }
+}
+
+/**
+ * Рейтинг в виде звуздочек
+ */
+
+const ratingItemList = document.querySelectorAll('.form-reviews__star');
+const inputSaveRating = document.querySelector('#form-reviews__rating');
+if (ratingItemList) {
+  const ratingItemArray = Array.prototype.slice.call(ratingItemList);
+
+  ratingItemArray.forEach(item => {
+    item.addEventListener('click', function (e) {
+      const { rating } = item.dataset;
+      item.parentNode.dataset.ratingTotal = rating;
+      inputSaveRating.value = rating;
+    })
+  })
+}
+
+
+
 
 
 
@@ -211,9 +252,7 @@ function getReviewsText(e) {
   let previeousElement = this.previousElementSibling.innerText;
   console.log(previeousElement);
   const openPopup = document.querySelector('.popup-reviews');
-  // console.log(openPopup);
   let popupContent = openPopup.querySelector('.popup__text');
-  // console.log(popupContent);
   popupContent.innerText += previeousElement;
 }
 

@@ -25,7 +25,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-top: clamp(60px, 13vw, 130px);
+  // margin-top: clamp(60px, 13vw, 130px);
+}
+
+.wrapper {
+  @media screen and (min-width: 2000px) {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
 }
 
 section {
@@ -53,6 +60,10 @@ section {
 
   &.error {
     border-color: brown;
+  }
+
+  &:focus {
+    border-color: rgba($color: $mainColor, $alpha: .6);
   }
 }
 

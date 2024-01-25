@@ -27,15 +27,13 @@
                 <input type="text" name="name" id="name" placeholder="Имя" class="form-reviews__control">
                 <input type="mail" name="email" id="email" placeholder="Почта" class="form-reviews__control">
                 <div class="form-reviews__group">
-                  <input type="hidden" name="rating" id="form-reviews__rating" value="0">
-                  <div class="form-reviews__stars-cnt" data-storage-id="form-reviews__stars-cnt">
-                    <div class="form-reviews__stars">
-                      <span data-rating="1" data-description="Плохо" class="active"></span>
-                      <span data-rating="2" data-description="Есть и получше" class="active"></span>
-                      <span data-rating="3" data-description="Средне" class="active"></span>
-                      <span data-rating="4" data-description="Хорошо" class="active"></span>
-                      <span data-rating="5" data-description="Отлично! Рекомендую!" class="active"></span>
-                    </div>
+                  <input type="hidden" name="rating" id="form-reviews__rating" value="">
+                  <div class="form-reviews__stars" data-rating-total="0">
+                    <span data-rating="5" class="form-reviews__star"></span>
+                    <span data-rating="4" class="form-reviews__star"></span>
+                    <span data-rating="3" class="form-reviews__star"></span>
+                    <span data-rating="2" class="form-reviews__star"></span>
+                    <span data-rating="1" class="form-reviews__star"></span>
                   </div>
                 </div>
               </form>
