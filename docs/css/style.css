@@ -648,6 +648,7 @@ section.bg {
 
 .header__logo img {
   width: 35px;
+  height: 52px;
 }
 
 .header__logo div {
@@ -5235,6 +5236,31 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 620px) {
+  .contact__map iframe {
+    display: none;
+  }
+
+  .contact__inner {
+    padding: 0px 15px 40px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .requisites__image {
+    display: none;
+  }
+
+  .table-requisites__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
   .search-price__form form {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
@@ -5252,6 +5278,11 @@ button.swiper-pagination-bullet {
 
   .search-price .price-table__name {
     font-size: 14px;
+  }
+
+  .reviews-add__col img {
+    width: 100%;
+    height: 400px;
   }
 }
 
@@ -5336,11 +5367,6 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 425px) {
   .popup__content {
     padding: 40px 20px 60px;
-  }
-
-  .header__logo img {
-    width: 30px;
-    height: 100%;
   }
 
   .header__logo div span {

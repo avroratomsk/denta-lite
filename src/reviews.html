@@ -1,232 +1,237 @@
 <!doctype html>
 <html lang="ru">
-@@include('html/_head.htm',{ "title":"Отзывы" })
+  @@include('html/_head.htm',{ "title":"Отзывы" })
 
-<body class="_white">
-  <div class="wrapper">
-    @@include('html/_header.htm',{})
-    <main class="page-reviews">
-      <div class="single-banner" style="background-image: url(../img/specialisty.jpg);">
-        <div class="single-banner__container">
-          <div class="single-banner__inner">
-            @@include('html/breadcrumbs.html',{ "title":"Отзывы"})
-            <h1 class="single-banner__title _title">Отзывы о стоматологии "Дент-Лайт"</h1>
-          </div>
-        </div>
-      </div>
-
-      <section class="reviews-add">
-        <div class="reviews-add__container">
-          <div class="reviews-add__row">
-            <div class="reviews-add__col">
-              <img src="@img/about.jpg" alt="">
-            </div>
-            <div class="reviews-add__col">
-              <h2 class="reviews-add__title _title">Напишите свой <br> <span>Отзыв</span></h2>
-              <form action="#" method="post" class="reviews-add__form form-reviews">
-                <input type="text" name="name" id="name" placeholder="Имя" class="form-reviews__control">
-                <input type="mail" name="email" id="email" placeholder="Почта" class="form-reviews__control">
-                <div class="form-reviews__group">
-                  <input type="hidden" name="rating" id="form-reviews__rating" value="">
-                  <div class="form-reviews__stars" data-rating-total="0">
-                    <span data-rating="5" class="form-reviews__star"></span>
-                    <span data-rating="4" class="form-reviews__star"></span>
-                    <span data-rating="3" class="form-reviews__star"></span>
-                    <span data-rating="2" class="form-reviews__star"></span>
-                    <span data-rating="1" class="form-reviews__star"></span>
-                  </div>
-                </div>
-              </form>
-              <textarea name="reviews" id="reviews" rows="5" placeholder="Ваш отзыв"
-                class="form-reviews__control"></textarea>
-              <button type="submit" class="form-reviews__btn btn">Отправить</button>
+  <body class="_white">
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-reviews">
+        <div class="single-banner" style="background-image: url(../img/specialisty.jpg)">
+          <div class="single-banner__container">
+            <div class="single-banner__inner">
+              @@include('html/breadcrumbs.html',{ "title":"Отзывы"})
+              <h1 class="single-banner__title _title">Отзывы о стоматологии "Дент-Лайт"</h1>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="reviews bg">
-        <div class="reviews__container">
-          <h2 class="reviews__title _title">Отзывы <span>о нас</span></h2>
-          <div class="reviews__grid">
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
+        <section class="reviews-add">
+          <div class="reviews-add__container">
+            <div class="reviews-add__row">
+              <div class="reviews-add__col">
+                <img src="@img/feed-form-block.webp" alt="" />
+              </div>
+              <div class="reviews-add__col">
+                <h2 class="reviews-add__title _title">
+                  Напишите свой <br />
+                  <span>Отзыв</span>
+                </h2>
+                <form action="#" method="post" class="reviews-add__form form-reviews">
+                  <input type="text" name="name" id="name" placeholder="Имя" class="form-reviews__control" />
+                  <input type="mail" name="email" id="email" placeholder="Почта" class="form-reviews__control" />
+                  <div class="form-reviews__group">
+                    <input type="hidden" name="rating" id="form-reviews__rating" value="" />
+                    <div class="form-reviews__stars" data-rating-total="0">
+                      <span data-rating="5" class="form-reviews__star"></span>
+                      <span data-rating="4" class="form-reviews__star"></span>
+                      <span data-rating="3" class="form-reviews__star"></span>
+                      <span data-rating="2" class="form-reviews__star"></span>
+                      <span data-rating="1" class="form-reviews__star"></span>
+                    </div>
                   </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
-              </div>
-            </div>
-
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                  </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
-              </div>
-            </div>
-
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                  </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
-              </div>
-            </div>
-
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                  </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
-              </div>
-            </div>
-
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                  <a href="#">Первичная консультация</a>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                  </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
-              </div>
-            </div>
-
-            <div class="reviews__slide">
-              <div class="reviews__head">
-                <div class="reviews__name">
-                  <p>Иванов Иван</p>
-                  <a href="#">Первичная консультация</a>
-                </div>
-                <div class="reviews__rating">
-                  <div class="reviews__stars">
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                    <img src="@img/star_full.png" alt="" />
-                  </div>
-                  <div class="reviews__date">20.11.2023</div>
-                </div>
-              </div>
-              <div class="reviews__content">
-                <div class="reviews__text">
-                  qweqweqweLorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab
-                  a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga,
-                  porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores
-                  laboriosam molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium
-                  quisquam consectetur exercitationem cumque assumenda voluptatibus ipsa incidunt.
-                </div>
-                <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </form>
+                <textarea
+                  name="reviews"
+                  id="reviews"
+                  rows="5"
+                  placeholder="Ваш отзыв"
+                  class="form-reviews__control"
+                ></textarea>
+                <button type="submit" class="form-reviews__btn btn">Отправить</button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </main>
-    @@include('html/_footer.htm',{})
-    @@include('html/_popup.htm',{})
-  </div>
-  @@include('html/_js.htm',{})
-</body>
+        <section class="reviews bg">
+          <div class="reviews__container">
+            <h2 class="reviews__title _title">Отзывы <span>о нас</span></h2>
+            <div class="reviews__grid">
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab a
+                    expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam molestiae
+                    quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
 
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab a
+                    expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam molestiae
+                    quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
+
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab a
+                    expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam molestiae
+                    quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
+
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab a
+                    expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam molestiae
+                    quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
+
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                    <a href="#">Первичная консультация</a>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in ab a
+                    expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam molestiae
+                    quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
+
+              <div class="reviews__slide">
+                <div class="reviews__head">
+                  <div class="reviews__name">
+                    <p>Иванов Иван</p>
+                    <a href="#">Первичная консультация</a>
+                  </div>
+                  <div class="reviews__rating">
+                    <div class="reviews__stars">
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                      <img src="@img/star_full.png" alt="" />
+                    </div>
+                    <div class="reviews__date">20.11.2023</div>
+                  </div>
+                </div>
+                <div class="reviews__content">
+                  <div class="reviews__text">
+                    qweqweqweLorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, iste modi facilis in
+                    ab a expedita vitae enim libero illo, quae dolores quis, autem unde totam natus ipsa. Fuga, porro?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi dolores laboriosam
+                    molestiae quae temporibus corporis repellat animi, iusto ad, non accusantium quisquam consectetur
+                    exercitationem cumque assumenda voluptatibus ipsa incidunt.
+                  </div>
+                  <button type="button" class="reviews__btn" data-popup=".popup-reviews">Показать весь отзыв</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{}) @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>

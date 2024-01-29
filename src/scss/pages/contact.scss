@@ -14,6 +14,12 @@
 
   &__map {
     position: relative;
+
+    iframe {
+      @media screen and (max-width: 620px) {
+        display: none;
+      }
+    }
   }
 
   // .contact__inner
@@ -25,6 +31,14 @@
     background-color: $white;
     padding: clamp(20px, 20vw, 40px);
     width: clamp(290px, 90vw, 800px);
+
+    @media screen and (max-width: 620px) {
+      padding: 0px 15px 40px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
   }
 
   // .contact__content
@@ -227,6 +241,10 @@
     right: -10%;
     transform: translateY(-50%);
     opacity: .1;
+
+    @media screen and (max-width: 620px) {
+      display: none;
+    }
   }
 }
 
@@ -241,6 +259,12 @@
     justify-content: space-between;
     border-bottom: 1px solid rgba($color: $mainColor, $alpha: .5);
     padding: 20px 20px;
+
+    @media screen and (max-width: 620px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
   }
 
   // .table-requisites__col
